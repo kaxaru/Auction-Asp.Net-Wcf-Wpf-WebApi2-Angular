@@ -1,0 +1,82 @@
+﻿@model  Dictionary<string, Auction.Presentation.Areas.Admin.Models.UsersWithPermissions>
+@using Auction.Presentation.Helpers;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminView.cshtml";
+}
+
+<h2>@Resource._menu_user</h2>
+<hr />
+
+@Html.ActionLink(Resource._admin_addUser, "Create", "User", new { }, new { @class = "ui blue basic button" })
+
+@foreach (KeyValuePair<string, UsersWithPermissions> usersWithPerrmissions in Model)
+{
+    <h2>@usersWithPerrmissions.Key</h2>
+    if (usersWithPerrmissions.Value.Users.FirstOrDefault() != null)
+    {
+<table class="ui celled table">
+    <thead>
+        <tr>
+            <th>@Resource._admin_user_TLOGIN</th>
+            <th>@Resource._admin_userRole_TNAME</th>
+            <th>@Resource._admin_category_TNAME</th>
+            <th>@Resource._admin_user_TPASSWORD</th>
+            <th>@Resource._admin_user_TFNAME</th>
+            <th>@Resource._admin_user_TSNAME</th>
+            <th>@Resource._admin_user_TRDATE</th>
+            <th>@Resource._admin_user_TLOCALE</th>
+            <th>@Resource._admin_user_TTZ</th>
+            <th>@Resource._admin_user_TPIC</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var user in usersWithPerrmissions.Value.Users)
+    {
+        PermissionViewModel perrmission = usersWithPerrmissions.Value.Permissions.FirstOrDefault(p => p.UserId == user.Id);
+        <tr>
+            <td>@Html.DisplayFor(model => user.Login)</td>
+            <td>@Html.DisplayFor(model => perrmission.Role)</td>
+
+
+            @if (perrmission.Role == Auction.Presentation.Models.Role.Moderator)
+            {
+                <td>                  
+                       @Auction.Presentation.Areas.Admin.Controllers.UserController.GetCategories(usersWithPerrmissions.Key, perrmission.CategoriesId)                                      
+                </td>
+            }
+            else if (perrmission.Role == Auction.Presentation.Models.Role.Admin)
+            {
+                <td> All</td>
+            }
+            else
+            {
+                <td> Not access</td>
+            }
+<td>@Html.DisplayFor(model => user.Password)</td>
+            <td>@Html.DisplayFor(model => user.FirstName)</td>
+            <td>@Html.DisplayFor(model => user.LastName)</td>
+            <td>@Html.DisplayFor(model => user.RegistrationDate)</td>
+            <td>@Html.DisplayFor(model => user.Locale)</td>
+            <td>@Html.DisplayFor(model => user.TimezoneId)</td>
+            <td>
+                <div class="ui small image">
+                    <img class="admin image" src="@Url.Action("RenderImageUser", "Image", new { Area = "", id = user.Id })" />
+                </div>
+            </td>
+            <td>
+                @Html.ActionLink(Resource._admin_edit, "Edit", "User", new { id = user.Id }, new { @class = "ui green basic button" })
+            </td>
+            <td>
+                @Html.ActionLink(Resource._admin_remove, "Delete", "User", new { id = user.Id }, new { @class = "ui red basic button" })
+            </td>
+        </tr>
+    }
+</table>
+    }
+    else
+    {
+        <div><h2 class="center">Is not filled</h2></div>
+    }
+}

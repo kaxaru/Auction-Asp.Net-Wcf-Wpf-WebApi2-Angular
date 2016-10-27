@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "NotFound";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="error half">
+    <h2>@Resource._pageNotFound  @ViewBag.Path  @Resource._notFound</h2>
+    <span>@Resource._error404</span>
+    <div class="margin-default">@Html.ActionLink(Resource._mainPage, "Index", "Home", new { area = "" }, new { @class = "ui button basic blue" })</div>
+</div>

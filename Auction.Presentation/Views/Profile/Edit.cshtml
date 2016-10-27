@@ -1,0 +1,99 @@
+﻿@model Auction.Presentation.Models.ProfileViewModel
+@using Auction.Presentation.Helpers;
+@using Auction.Presentation.Localization;
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    var localizations = LocalizationService.GetAvalaibleLocalization().Select(loc => new
+    {
+        localizationId = loc.LocalizationId,
+        Value = loc.Name
+    });
+
+
+}
+<div class="half">
+<h2>@Resource._admin_editUser</h2>
+<hr />
+@using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { enctype = "multipart/form-data" , @class = "ui form" }))
+{
+    <div class="ui form">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="field">
+            <div class="ui labeled input">
+                <div class="ui label">
+                    @Resource._admin_user_TFNAME
+                </div>
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+        </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">
+                        @Resource._admin_user_TSNAME
+                    </div>
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                </div>
+            </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+        </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    @Html.DropDownListFor(model => model.Id, new SelectList(localizations, "localizationId", "Value", Model.Locale), Resource._chooseLang, new { @class = "ui floating dropdown labeled search icon butto locale", Name = "Locale" })
+                </div>
+            </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.Locale, "", new { @class = "text-danger" })
+        </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">
+                        @Resource._admin_user_TTZ
+                    </div>
+                    @Html.DropDownListFor(model => model.Id, new SelectList(ViewBag.TimeZone, "timezoneId", "Value", Model.TimezoneId), new { @class = "timezoneId", Name = "timezoneId", Id = "timezoneId" })
+                </div>
+            </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.TimezoneId, "", new { @class = "text-danger" })
+        </div>
+
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui icon big button" id="divUpload">
+                        <i class="cloud icon"></i>
+                    </div>
+                    <input type="file" id="image" name="image" style="display: none">
+                </div>
+            </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.Picture, "", new { @class = "text-danger" })
+        </div>
+
+
+            <button class="ui green basic button" type="submit">@Resource._admin_edit</button>
+        </div>
+}
+
+
+<div class="back">
+    @Html.ActionLink(Resource._admin_backPage, "Index", new { }, new { @class = "ui blue basic button" })
+</div>
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+

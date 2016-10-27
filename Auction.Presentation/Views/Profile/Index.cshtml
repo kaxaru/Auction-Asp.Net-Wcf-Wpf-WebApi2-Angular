@@ -1,0 +1,57 @@
+﻿@model Auction.Presentation.Models.ProfileViewModel
+@using Auction.Presentation.Helpers;
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="ui two column grid">
+    <div class="column">
+        <div class="profile image">
+            <img src="@Url.Action("RenderImageUser", "Image", new {id = Model.Id})">
+        </div>
+    </div>
+    <div class="column">
+        <div class="content">
+            <a class="header"><h2>@Resource._profile_TWELCOME</h2></a>
+            <div class="meta">
+                <span class="coursive">@Resource._profile_TDESCRIPTION</span>
+            </div>          
+            <div class="description">
+                <div class="ui list">
+                    <div class="item"><b>@Resource._admin_user_TFNAME:</b>  @Model.FirstName</div>
+                    <div class="item"><b>@Resource._admin_user_TSNAME:</b> @Model.LastName</div>
+                    <div class="item"><b>@Resource._admin_user_TLOCALE:</b> @Model.Locale</div>
+                    <div class="item"><b>@Resource._admin_user_TDATEREG:</b> @Model.RegistrationDate.Add(TimeZoneHelper.ConverTimeToServer(Model.TimezoneId))</div>
+                    <div class="item"><b>@Resource._admin_user_TTZ:</b> @Model.TimezoneId </div>
+                </div>
+            </div>
+            
+        </div>
+@if (User != null && User.Identity.IsAuthenticated)
+{
+       <div class="content">
+           <a class="ui basic button" href="@Url.Action("ChangePassword", "Profile", new { id = Model.Id })">
+               <i class="icon erase"></i>
+               @Resource._profile_changePassword
+           </a>
+            <a class="ui basic button" href="@Url.Action("Edit", "Profile", new { id = Model.Id })">
+                <i class="icon erase"></i>
+                @Resource._profile_edit
+            </a>
+            <a class="ui basic button" href="@Url.Action("CreateProduct", "Profile", new { id = Model.Id })">
+                <i class="icon add circle"></i>
+                @Resource._profile_createProduct
+            </a>
+            <a class="ui basic button" href="@Url.Action("UserProductList", "Profile", new { id = Model.Id })">
+                <i class="icon check"></i>
+                @Resource._profile_checkProduct
+            </a>
+           <a class="ui basic button" href="@Url.Action("UserWinProductList", "Profile", new { id = Model.Id })">
+               <i class="icon check"></i>
+               @Resource._profile_checkWinnerList
+           </a>
+       </div>
+}
+    </div>
+</div>

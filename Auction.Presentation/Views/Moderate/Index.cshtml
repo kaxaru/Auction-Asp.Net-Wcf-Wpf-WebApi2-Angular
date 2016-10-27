@@ -1,0 +1,97 @@
+﻿@model Dictionary<string, IList<Auction.Presentation.Models.ProductViewModel>>
+@using Auction.Presentation.Helpers;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var states = Enum.GetValues(typeof(Auction.BussinessLogic.Models.State))
+                    .Cast<Auction.BussinessLogic.Models.State>()
+                    .Select(e => new SelectListItem
+                    {
+                        Value = ((int)e).ToString(),
+                        Text = ((Auction.BussinessLogic.Models.State)e).GetDescription()
+                    });
+}
+
+<div class="half">
+<h2 class="center">@Resource._menu_product</h2>
+<hr />
+
+    @*Html.AntiForgeryToken()*@
+
+    <div class="ui form">
+@foreach (KeyValuePair<string, IList<Auction.Presentation.Models.ProductViewModel>> products in Model)
+{
+    if (products.Value.Count != 0)
+    {
+    <h2>@products.Key</h2>
+        <table class="ui celled table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>@Resource._admin_product_TNAME</th>
+                    <th>@Resource._admin_product_TSTDATE</th>
+                    <th>@Resource._admin_product_TDURATION</th>
+                    <th>@Resource._admin_product_TSTPRICE</th>
+                    <th>@Resource._admin_product_TSTATE</th>
+                    <th>@Resource._admin_product_TDESC</th>
+                    <th>@Resource._admin_product_TPIC</th>
+                </tr>
+            </thead>
+            @for (var product = 0; product < products.Value.Count; product++)
+            {
+                <input type="hidden" class="form-control" model = @string.Format("{0}", products.Key) value="@products.Key" />
+                <tr>
+                    <td>
+                        <div class="ui slider checkbox">
+                        <input type="checkbox" name="newsletter">
+                          <input type="hidden" model=@string.Format("products{0}{1}", products.Key, product) field = "Id" value="@products.Value[product].Id" />
+                        </div>
+                    </td>                    
+                    <td>@Html.DisplayFor(model => products.Value[product].Name)
+                        <input type="hidden" model=@string.Format("products{0}{1}", products.Key, product) field = "Name" auctionName=@string.Format("{0}", products.Key) value="@products.Value[product].Name" />
+                    </td>
+
+                    <td>@Html.DisplayFor(model => products.Value[product].StartDate)
+                        @Html.EditorFor(model => products.Value[product].StartDate, new { htmlAttributes = new { @class = "form-control ", type = "hidden" } })
+                    </td>
+                    <td>@Html.DisplayFor(model => products.Value[product].Duration)</td>
+                    <td>@Html.DisplayFor(model => products.Value[product].StartPrice)</td>
+                    <td>
+                        <div class="field">                                 
+                          @Html.DropDownListFor(model => products.Value[product].State, states, new { @class = "form-control state", model = string.Format("products{0}{1}", products.Key, product), auctionName = string.Format("{0}", products.Key) })
+                       </div>
+                    </td>
+                    <td name="@Html.DisplayNameFor(model => products.Value[product].Description)">@Html.DisplayFor(model => products.Value[product].Description)</td>
+                    <td>
+                        <div class="ui small image">
+                            <img class="admin image" src="@Url.Action("RenderImageProduct", "Image", new { id = products.Value[product].Id, auctionId = products.Key })" />
+                        </div>
+                    </td>
+                </tr>
+            }
+        </table>
+
+    }
+}
+            @if (@Model.Values.Count() > 0)
+            {
+                <button class="ui green basic button sendModel">@Resource._admin_add</button>
+            }
+            else
+            {
+                <div class="center"><h2>@Resource._NothingModerate</h2></div>
+            }
+
+  </div>
+</div>
+<script>
+    var  Url = @Auction.Presentation.Helpers.JsonSerialize.SerializeObject(@Url.Action("Index", "Moderate"));
+</script>
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/moderation.js?v2")
+}

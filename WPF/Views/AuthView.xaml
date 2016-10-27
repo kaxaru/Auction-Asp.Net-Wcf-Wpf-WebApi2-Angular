@@ -1,0 +1,63 @@
+﻿<Window x:Class="WPF.Views.AuthView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:viewModels="clr-namespace:WPF.ViewModels"
+        xmlns:views="clr-namespace:WPF.Views"
+        xmlns:helpers="clr-namespace:WPF.Helpers"
+        xmlns:selectors="clr-namespace:WPF.Selectors"
+        xmlns:converters="clr-namespace:WPF.Converters"
+        mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="720"
+        Height="570" Width="900"
+        DataContext="{dxmvvm:ViewModelSource Type={x:Type viewModels:AuthViewModel}}">
+
+    <Window.Resources>
+        <converters:CurrentUserVisibilityConverter x:Key="CurrentUserVisibilityConverter"/>
+
+        <DataTemplate x:Key="TryLoginView">
+            <views:TryLoginView DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Key="ProductsView">
+            <views:ProductsView />
+        </DataTemplate>
+    </Window.Resources>
+
+
+    <DockPanel LastChildFill="True" >
+        <Grid DockPanel.Dock="Top" Margin="0"  Height="40">
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Top" Background="LightBlue">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <TextBlock>
+                        <Run FontSize="16" FontWeight="Bold">Login:</Run>
+                    </TextBlock>
+                    <TextBox Margin="40,0,0,0" Width="160" Height="34"
+                             Text="{Binding Login, UpdateSourceTrigger=PropertyChanged}"/>
+                </StackPanel>
+        
+                <StackPanel Orientation="Horizontal" Margin="40,0,10,0">
+                    <TextBlock> 
+                        <Run FontSize="16" FontWeight="Bold"> Password:</Run>
+                    </TextBlock>
+                    <PasswordBox x:Name="PasswordBox" SelectionBrush="blue" Margin="10, 0"  Width="160" MinHeight="24"></PasswordBox> 
+                </StackPanel>
+
+                <Button Content="authorize" Height="30" Width="100" Margin="10,0"  Command="{Binding AuthorizeCommand}" CommandParameter="{Binding ElementName=PasswordBox}"/>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Background="BlueViolet" Orientation="Horizontal"
+                        Visibility="{Binding CurrentUser, Converter={StaticResource CurrentUserVisibilityConverter}}">
+                <TextBlock FontSize="18" FontWeight="Black" Text="{Binding CurrentUser.Login}"/>
+                <Button Content="LOGOUT" Command="{Binding LogoutCommand}" Margin="40,8,0,8"/>
+            </StackPanel>
+        </Grid>
+
+        <ContentControl Content="{Binding CurrentView}" VerticalAlignment="Stretch" Background="Blue">
+            <ContentControl.ContentTemplateSelector>
+                <selectors:InnerViewTemplateSelector ProductsDataTemplate="{StaticResource ProductsView}"
+                                                     TryLoginDataTemplate="{StaticResource TryLoginView}">
+                </selectors:InnerViewTemplateSelector>
+            </ContentControl.ContentTemplateSelector>
+        </ContentControl>
+    </DockPanel>
+</Window>

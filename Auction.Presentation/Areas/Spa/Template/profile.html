@@ -1,0 +1,123 @@
+﻿<div class="half">
+<div class="ui divided items">
+    <div class="item" ng-if="authorize"  ng-controller="ProfileController">
+        <div class="image">
+            <img ng-src="./../{{auction}}/Image/RenderImageUser/{{user.Id}}" />
+        </div>
+        <div class="content">
+            <a class="header">{{user.FirstName}} {{user.LastName}}</a>
+            <div class="meta">
+                <span class="cinema">Locale: {{user.Locale}}</span>
+            </div>
+            <div class="description">
+                <div class="ui divided selection list">
+                    <a class="item">
+                        <div class="ui green horizontal label">Registration date:</div>
+                        {{user.RegistrationDate | formatDate}}
+                    </a>
+                    <a class="item">
+                        <div class="ui purple horizontal label">Timezone: </div>
+                        {{user.TimezoneId | timeZone}}
+                    </a>
+                 </div>
+            <div class="extra">
+                <div class="ui floated basic green button">
+                    List product
+                    <i class="right chevron icon"></i>
+                </div>
+                <div class="ui floated basic green button" ng-click="showProductModal()">
+                    Create product
+                    <i class="right chevron icon"></i>
+                </div>              
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    <div class="ui modal product-modal" ng-controller="CreateProductController">
+        <i class="close icon"></i>
+        <div class="header">
+            Create product
+        </div>
+        <div class="content">
+            <form class="ui form" name="productForm" ng-submit="createProduct()" enctype="multipart/form-data" novalidate>
+                <div class="field">
+                    <label>Auction</label>
+                    <div class="two fields">
+                        <select class="ui dropdown" name="auction" ng-model="product.auction" ng-change="changeCategories()" ng-options="auction.name for auction in auctions track by auction.name" required></select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Category</label>
+                    <div class="two fields">
+                        <select class="ui dropdown" name="category" ng-model="product.category" ng-options="category.name for category in categories track by category.id" required></select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Name</label>
+                    <div class="fields">
+                        <div class="twelve wide field">
+                            <input type="text" name="name" placeholder="Name" ng-model="product.name" ng-minlength="4" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Duration</label>
+                    <div class="ui labeled input fields">
+                        <div class="ui calendar timeCalendar" ng-model="pr" ng-change="getDuration()">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input type="text" placeholder="Date/Time" id="dateTo" name="timeTo" ng-model="product.time" time required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Start price</label>
+                    <div class="fields">
+                        <div class="twelve wide field">
+                            <input type="number" name="startPrice" placeholder="start price" ng-model="product.stPrice" min="1" integer required>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Description</label>
+                    <div class="fields">
+                        <div class="twelve wide field">
+                            <textarea type="text" name="description" ng-model="product.description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui labeled input">
+                        <div class="ui icon big button" id="divUpload" ng-click="uploadPic($event)">
+                            <i class="cloud icon"></i>
+                        </div>
+                        <input type="file" id="image" name="image" style="display: none">
+                    </div>
+                </div>
+                <div class="help-block">
+                    <div ng-show="productForm.auction.$dirty && productForm.auction.$error.required">Field auction required</div>
+                    <div ng-show="productForm.category.$dirty && productForm.category.$error.required">Field category required</div>
+                    <div ng-show="productForm.name.$dirty && productForm.name.$error.required">Field name required</div>
+                    <div ng-show="productForm.name.$dirty && productForm.name.$error.minlength">Field name too short</div>
+                    <div ng-show="productForm.timeTo.$dirty && productForm.timeTo.$error.required">Field duration required</div>
+                    <div ng-show="productForm.timeTo.$dirty && productForm.timeTo.$invalid">Field duration is not correct. Date must be greater than it is today</div>
+                    <div ng-show="productForm.startPrice.$error.integer">The value is not a valid integer!</div>
+                    <div ng-show="productForm.startPrice.$error.min">The value must be great than 1 or equal</div>
+                </div>
+            </form>
+        </div>
+        <div class="actions">
+            <div class="ui black deny button">
+                Cancel
+            </div>
+            <button class="ui positive right labeled icon button" type="submit" ng-click="createProduct()" ng-disabled="productForm.$invalid">
+                Create
+                <i class="checkmark icon"></i>
+            </button>
+        </div>
+    </div>
+
+</div>
+

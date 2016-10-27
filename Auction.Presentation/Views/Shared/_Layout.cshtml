@@ -1,0 +1,89 @@
+﻿@using System.Security.Claims
+
+@{
+    var claimsIdentity = User.Identity as ClaimsIdentity;
+    var role = claimsIdentity.FindFirst(System.Security.Claims.ClaimTypes.Role);
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My auction application</title>
+    @Styles.Render("~/Content/semantic")
+    @Styles.Render("~/Content/app.css?v2")
+    @Styles.Render("~/Content/header.css?v4")
+    @Styles.Render("~/Content/profile.css?v4")
+    @Styles.Render("~/Content/flipclock.css")
+    @Styles.Render("~/Content/footer.css?v3")
+    @Styles.Render("~/Content/calendar.semantic-ui.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="ui grid">
+        <div class="computer tablet only row">
+            <div class="ui inverted fixed menu navbar page grid">
+                @Html.ActionLink(Resource._app, "Index", "Home", new { area = "" }, new { @class = "brand item" }) 
+                @if (User != null && User.Identity.IsAuthenticated && claimsIdentity.HasClaim(ClaimTypes.Role, Auction.BussinessLogic.Models.Role.Admin.ToString()))
+                {
+                    @Html.ActionLink(Resource._app_adminPanel, "Index", "Admin", new { area = "Admin" }, new { @class = "brand item" })   
+                }               
+                     @Html.Action("Auctions", "Menu")
+                     @Html.Action("Categories", "Menu")
+                @{ 
+                    var check = false;
+                    if(claimsIdentity.HasClaim(ClaimTypes.Role, Auction.BussinessLogic.Models.Role.Admin.ToString()))
+                    {
+                        check = true;
+                    }
+                    else
+                    {
+                        var listAuctions = Auction.Presentation.Infrastructure.Auctions.GetAuctionsName();
+                        for (var auction = 0; auction < listAuctions.Count; auction++)
+                        {
+                            if (claimsIdentity.HasClaim("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/" + listAuctions[auction], Auction.BussinessLogic.Models.Role.Moderator.ToString()))
+                            {
+                                check = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                @if (User != null && User.Identity.IsAuthenticated && check)
+                {
+                     @Html.ActionLink(Resource._app_moderate, "Index", "Moderate", new { area = "" }, new { @class = "brand item" })   
+                }
+
+                
+                @Html.ActionLink(Resource._app_spa, "../../Spa", new { area = "" }, new { @class = "brand item" })
+                
+                <div class="right menu">
+
+                    @Html.Action("Login", "Login");
+                                                                          
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        
+        <footer class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <p>&copy; @DateTime.Now.Year - My Auction</p>
+                <div class="pull-right">@Html.Partial("_Language")</div>
+            </div>
+        </footer>
+    </div>
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/semanticJs")
+    @Scripts.Render("~/Scripts/header.js?v5")
+    @Scripts.Render("~/Scripts/footer.js?v4")
+    @Scripts.Render("~/Scripts/calendar.semantic-ui.js?v2")
+    @Scripts.Render("~/Scripts/timer.js?v4")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

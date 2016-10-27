@@ -1,0 +1,30 @@
+﻿/*@media (min-height: 320px)
+{
+    .ui.footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}*/
+
+.footer_bottom{
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+}
+
+footer{
+    text-align:center;
+}
+
+footer p {
+    display:inline-block;
+}
+
+.pull-right{
+    float:right;
+}
+
+.pull-right input {
+    padding-left: 4em;
+}

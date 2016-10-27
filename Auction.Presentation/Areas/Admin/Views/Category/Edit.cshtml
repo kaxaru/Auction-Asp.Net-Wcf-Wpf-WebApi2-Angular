@@ -1,0 +1,63 @@
+﻿@model Auction.Presentation.Models.CategoryViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminView.cshtml";
+}
+<h2>@Resource._admin_editCategory</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <div class="ui form">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        <input type="text" value="@Request.QueryString["auctionId"]" name="oldAuction"  hidden/>
+        <div class="field">
+            <div class="ui labeled input">
+                <div class="ui label">
+                    @Resource._admin_auction_TNAME
+                </div>
+                @Html.DropDownListFor(model => model.Id, new SelectList(ViewBag.Auction, "auctionId", "Value", Request.QueryString["auctionId"]), new { @class = "auction", Name = "auctionId", Id = "auctionId" })
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui labeled input">
+                <div class="ui label">
+                    @Resource._admin_category_TNAME
+                </div>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })           
+            </div>
+        </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+        <div class="field">
+            <div class="ui labeled input">
+                <div class="ui label">
+                    @Resource._admin_category_TDESC
+                </div>
+                @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+        </div>
+        <div class="field">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value=@Resource._admin_save class="ui button basic blue" />
+            </div>
+        </div>
+        </div>
+}
+
+<div class="link">
+    @Html.ActionLink(Resource._admin_backPage, "Index", new { }, new { @class = "ui button basic blue" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+

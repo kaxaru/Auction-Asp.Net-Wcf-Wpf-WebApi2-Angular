@@ -1,0 +1,97 @@
+﻿    <div class="global-offset">
+        <table ng-table="productsTable" class="ui selectable inverted table" show-filter="true">
+            <tbody>
+            <tr ng-repeat="product in $data">
+                <td data-title="'Id'">
+                    {{product.id}}
+                </td>
+                <td data-title="'Auctions'" filter="{auction: 'select'}" filter-data="getAuctions($column)" sortable="'auction'">
+                    {{product.auction}}
+                </td>
+                <td data-title="'Category'" filter="{categoryID: 'select'}" filter-data="getCategories($column)" sortable="'categoryID'">
+                    {{product.categoryID}}
+                </td>
+                <td data-title="'Price'">
+                    {{getPrice()}}
+                </td>
+                <td data-title="'Name'" filter="{name: 'text'}" sortable="'name'">
+                    {{product.name}}
+                </td>
+                <td data-title="'Description'">
+                    {{product.description}}
+                </td>
+                <td data-title="'Picture'">
+                    <div class="ui card">
+                        <div class="content" ng-show="renderContent">
+                            <div class="right floated meta">{{lastBidTime}}</div>
+                            <img class="ui floated left avatar image" ng-src="./../Auction/Image/RenderImageUser/{{bid.userId}}" />
+                        </div>
+                        <div class="image">
+                            <img ng-src="{{getPicture(product.id)}}" />
+                        </div>
+                        <div class="content {{product.id}} {{product.auction}} clock" ng-init="getTime(product)">
+                            <i class="comment icon"></i>
+                        </div>
+                    </div>
+                </td>
+                <td ng-show="authorize()">
+                    <button class="ui basic button green" ng-click="modalBid()"> Make a bid</button>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <form class="ui form" name="bid" ng-init="getBidOffset()">
+    <div class="ui modal {{product.id}} {{product.auction}}" ng-repeat="product in products">
+        <i class="close icon"></i>
+        <div class="header">
+            Create a new bid 
+        </div>
+        <div class="image content">
+            <div class="ui medium image">
+                <img ng-src={{getPicture(product.id)}}>
+            </div>
+            <div class="description">
+                <div class="ui divided selection list">
+                    <a class="item">
+                        <div class="ui red horizontal label">Product name</div>
+                        {{product.name}}
+                    </a>
+                    <a class="item">
+                        <div class="ui red horizontal label">Description:</div>
+                        {{product.description}}
+                    </a>
+                    <a class="item">
+                        <div class="ui red label">
+                            <span class="ui horizontal right spaced" ng-show="renderBidImage()">
+                            <img class="ui horizontal right spaced avatar image" src="./../Auction/Image/RenderImageUser/{{product.lastBidUser}}" >
+                            </span>
+                                Current price: 
+                        </div>
+                        {{getLastPrice()}}
+                    </a>
+                        <div class="ui labeled input">
+                            <div class="ui label">
+                                Bid
+                            </div>
+                            <input integer min="{{getMinBid()}}" name="userBid" type="number" placeholder="" ng-model="userBid">
+                        </div>
+                        <div class="help-block">
+                            <div ng-show="bid.userBid.$error.integer">The value is not a valid integer!</div>
+                            <div ng-show="bid.userBid.$error.min">The value must be great than {{getMinBid()}} or equal</div>
+                        </div>                                                      
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui black deny button">
+                Cancel
+            </div>
+            <div class="ui positive right labeled icon button" ng-click="putNewBid()" ng-disabled="bid.$invalid">
+                Bid
+                <i class="checkmark icon"></i>
+            </div>
+        </div>
+    </div>
+  </form>

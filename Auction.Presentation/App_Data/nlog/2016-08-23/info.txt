@@ -1,0 +1,9 @@
+2016-08-23 03:40:35.7839|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - 4286f6ca-1234-4a58-a04e-dd307db35f9e, username -admin, timezone - Afghanistan Standard Time
+2016-08-23 03:40:47.0519|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-23 03:48:03.7589|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-23 03:48:54.7839|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-23 03:49:12.1299|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-23 03:49:31.9419|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - 7d198de7-0a25-45f6-a2fe-d65143c6a39d, username -moderator1, timezone - West Pacific Standard Time
+2016-08-23 03:49:38.4479|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - 7d198de7-0a25-45f6-a2fe-d65143c6a39d, username -moderator1, timezone - West Pacific Standard Time
+2016-08-23 03:49:59.0309|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-23 03:50:07.4949|INFO|Auction.Presentation.Controllers.BidController|user make to bid on product  - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user user, timezone - Central Pacific Standard Time, auction - Auction.Presentation.Infrastructure.ÑustomSettings.AuctionHouseElement , productId - 00000000-0000-0000-0000-000000000000

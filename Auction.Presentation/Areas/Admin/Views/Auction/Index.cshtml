@@ -1,0 +1,36 @@
+﻿@model IEnumerable<AuctionViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminView.cshtml";
+}
+
+<h2>@Resource._app_auctionHouse</h2>
+<hr />
+
+@Html.ActionLink(Resource._admin_addAuction, "Create", "Auction", new { }, new { @class = "ui blue basic button" })
+<table class="ui celled table">
+    <thead>
+        <tr>
+            <th>@Resource._admin_auction_TNAME</th>
+            <th>@Resource._admin_auction_TLOCATION</th>
+            <th>@Resource._admin_auction_TTYPE</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var auction in Model)
+            {
+        <tr>
+            <td>@Html.DisplayFor(model => auction.Name)</td>
+            <td>@Html.DisplayFor(model => auction.Location)</td>
+            <td>@Html.DisplayFor(model => auction.Type).ToString()</td>
+            <td>
+                @Html.ActionLink(Resource._admin_edit, "Edit", "Auction", new { name = auction.Name }, new { @class = "ui green basic button" })
+            </td>
+            <td>
+                @Html.ActionLink(Resource._admin_remove, "Delete", "Auction", new { name = auction.Name }, new { @class = "ui red basic button" })
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,65 @@
+﻿@model Dictionary<string, Auction.Presentation.Models.CatalogViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="half">
+    <h2 class="center">@Resource._menu_product</h2>
+    <hr />
+    @foreach (KeyValuePair<string, Auction.Presentation.Models.CatalogViewModel> catalog in Model)
+    {
+        <h2>@catalog.Key</h2>
+
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                        <th>@Resource._admin_product_TNAME</th>
+                        <th>@Resource._admin_category_TNAME</th>
+                        <th>@Resource._admin_product_TSTDATE</th>
+                        <th>@Resource._admin_product_TDURATION</th>
+                        <th>@Resource._admin_product_TSTPRICE</th>
+                        <th>@Resource._admin_product_TSTATE</th>
+                        <th>@Resource._admin_product_TDESC</th>
+                        <th>@Resource._admin_product_TPIC</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                @foreach (var product in catalog.Value.ProductVM)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(model => product.Name)</td>
+                        <td>@Html.DisplayFor(model => catalog.Value.CategoriesVM.FirstOrDefault(c => c.Id == product.CategoryID).Name)</td>
+                        <td>@Html.DisplayFor(model => product.StartDate)</td>
+                        <td>@Html.DisplayFor(model => product.Duration)</td>
+                        <td>@Html.DisplayFor(model => product.StartPrice)</td>
+                        <td>@Html.DisplayFor(model => product.State)</td>
+                        <td>@Html.DisplayFor(model => product.Description)</td>
+                        <td>
+                            <div class="ui small image">
+                                <img class="admin image" src="@Url.Action("RenderImageProduct", "Image", new {id = product.Id, auctionId = catalog.Key})" />
+                            </div>
+                        </td>
+                        <td>
+                            @if ((int)product.State == (int)Auction.BussinessLogic.Models.State.Draft)
+                    {
+                                @Html.ActionLink(Resource._admin_edit, "EditProduct", "Profile", new { id = product.Id, auctionId = catalog.Key }, new { @class = "ui green basic button" })
+                            }
+                        </td>
+                        <td>
+                            @Html.ActionLink(Resource._admin_remove, "DeleteProduct", "Profile", new { id = product.Id, auctionId = catalog.Key }, new { @class = "ui red basic button" })
+                        </td>
+                    </tr>
+                }
+            </table>
+    }
+
+
+    <div class="link">
+        @Html.ActionLink(Resource._admin_backPage, "Index", new { }, new { @class = "ui blue basic button" })
+    </div>
+</div>
+
+
+

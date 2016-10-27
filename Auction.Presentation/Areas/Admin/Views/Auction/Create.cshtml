@@ -1,0 +1,57 @@
+﻿@model AuctionViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminView.cshtml";
+}
+
+<h2>@Resource._admin_addAuction</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    <div class="ui form">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="field">
+            <div class="ui labeled input">
+                <div class="ui label">
+                    @Resource._admin_auction_TNAME
+                </div>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+        <div class="field">
+            <div class="ui labeled input">
+                <div class="ui label">
+                    @Resource._admin_auction_TLOCATION
+                </div>
+                @Html.TextAreaFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+        </div>
+        <div class="field">
+            <div class="ui labeled input">
+                <div class="ui label">
+                    @Resource._admin_auction_TTYPE
+                </div>
+                @Html.EnumDropDownListFor(model => model.Type, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="field">
+            @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+        </div>
+        <button class="ui green basic button" type="submit">@Resource._admin_add</button>
+    </div>
+}
+
+
+<div class="link">
+    @Html.ActionLink(Resource._admin_backPage, "Index", new { }, new { @class = "ui blue basic button" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

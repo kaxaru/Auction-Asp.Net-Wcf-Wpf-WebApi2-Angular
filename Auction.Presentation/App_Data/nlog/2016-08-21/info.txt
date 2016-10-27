@@ -1,0 +1,2 @@
+2016-08-21 01:30:41.2930|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-21 19:10:43.3541|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - 4286f6ca-1234-4a58-a04e-dd307db35f9e, username -admin, timezone - Afghanistan Standard Time

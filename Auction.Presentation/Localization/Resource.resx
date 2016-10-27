@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="errCompare" xml:space="preserve">
+    <value>fields not compare</value>
+  </data>
+  <data name="errDateTime" xml:space="preserve">
+    <value>datetime not correct</value>
+  </data>
+  <data name="errRequired" xml:space="preserve">
+    <value>this field is required</value>
+  </data>
+  <data name="errStringLength" xml:space="preserve">
+    <value>length not correct</value>
+  </data>
+  <data name="_admin_add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="_admin_addCategory" xml:space="preserve">
+    <value>Add new category</value>
+  </data>
+  <data name="_admin_addProduct" xml:space="preserve">
+    <value>Add product</value>
+  </data>
+  <data name="_admin_addUser" xml:space="preserve">
+    <value>add user</value>
+  </data>
+  <data name="_admin_backPage" xml:space="preserve">
+    <value>Prev. page</value>
+  </data>
+  <data name="_admin_category_TDESC" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="_admin_category_TNAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="_admin_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="_admin_editCategory" xml:space="preserve">
+    <value>Edit category</value>
+  </data>
+  <data name="_admin_editProduct" xml:space="preserve">
+    <value>Edit Product</value>
+  </data>
+  <data name="_admin_editUser" xml:space="preserve">
+    <value>edit user</value>
+  </data>
+  <data name="_admin_product_TDESC" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="_admin_product_TDURATION" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="_admin_product_TNAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="_admin_product_TPIC" xml:space="preserve">
+    <value>picture</value>
+  </data>
+  <data name="_admin_product_TSTATE" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="_admin_product_TSTDATE" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="_admin_product_TSTPRICE" xml:space="preserve">
+    <value>Start Price</value>
+  </data>
+  <data name="_admin_remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="_admin_removeCategory" xml:space="preserve">
+    <value>Remove category</value>
+  </data>
+  <data name="_admin_removeCategory_Text" xml:space="preserve">
+    <value>Do you want to remove this object?</value>
+  </data>
+  <data name="_admin_removeProduct" xml:space="preserve">
+    <value>Remove product</value>
+  </data>
+  <data name="_admin_removeProduct_Text" xml:space="preserve">
+    <value>Do you want to remove this object?</value>
+  </data>
+  <data name="_admin_removeUser" xml:space="preserve">
+    <value>remove user</value>
+  </data>
+  <data name="_admin_removeUser_Text" xml:space="preserve">
+    <value>Do you want to remove this object?</value>
+  </data>
+  <data name="_admin_save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="_admin_userRole_TNAME" xml:space="preserve">
+    <value>name of role</value>
+  </data>
+  <data name="_admin_user_TDATEREG" xml:space="preserve">
+    <value>Date registration</value>
+  </data>
+  <data name="_admin_user_TDPASSWORD" xml:space="preserve">
+    <value>repeat password</value>
+  </data>
+  <data name="_admin_user_TFNAME" xml:space="preserve">
+    <value>first name</value>
+  </data>
+  <data name="_admin_user_TLOCALE" xml:space="preserve">
+    <value>locale</value>
+  </data>
+  <data name="_admin_user_TLOGIN" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="_admin_user_TPASSWORD" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="_admin_user_TPIC" xml:space="preserve">
+    <value>picture</value>
+  </data>
+  <data name="_admin_user_TRDATE" xml:space="preserve">
+    <value>register date</value>
+  </data>
+  <data name="_admin_user_TSNAME" xml:space="preserve">
+    <value>second name</value>
+  </data>
+  <data name="_admin_user_TTZ" xml:space="preserve">
+    <value>time zone</value>
+  </data>
+  <data name="_admin_welcome" xml:space="preserve">
+    <value>Welcome to admin panel</value>
+  </data>
+  <data name="_app" xml:space="preserve">
+    <value>Auction</value>
+  </data>
+  <data name="_app_about" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="_app_adminPanel" xml:space="preserve">
+    <value>Admin panel</value>
+  </data>
+  <data name="_app_category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="_app_contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="_app_moderate" xml:space="preserve">
+    <value>Moderate</value>
+  </data>
+  <data name="_chooseLang" xml:space="preserve">
+    <value>Choose language</value>
+  </data>
+  <data name="_home_createAccount" xml:space="preserve">
+    <value>Create a new account</value>
+  </data>
+  <data name="_login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="_mainPage" xml:space="preserve">
+    <value>on main page</value>
+  </data>
+  <data name="_menu_about" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="_menu_admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="_menu_category" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="_menu_contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="_menu_product" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="_menu_user" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="_role_admin" xml:space="preserve">
+    <value>admin</value>
+  </data>
+  <data name="_role_moderator" xml:space="preserve">
+    <value>moderator</value>
+  </data>
+  <data name="_role_user" xml:space="preserve">
+    <value>user</value>
+  </data>
+  <data name="_signIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="_state_banned" xml:space="preserve">
+    <value>banned</value>
+  </data>
+  <data name="_state_draft" xml:space="preserve">
+    <value>draft</value>
+  </data>
+  <data name="_state_outdated" xml:space="preserve">
+    <value>outdated</value>
+  </data>
+  <data name="_state_selling" xml:space="preserve">
+    <value>selling</value>
+  </data>
+  <data name="errCreate" xml:space="preserve">
+    <value>try again</value>
+  </data>
+  <data name="errDPassword" xml:space="preserve">
+    <value>columns of password not equal </value>
+  </data>
+  <data name="errDuration" xml:space="preserve">
+    <value>duration not correct</value>
+  </data>
+  <data name="errLocaleNotFound" xml:space="preserve">
+    <value>locale not found</value>
+  </data>
+  <data name="errNotUnique" xml:space="preserve">
+    <value>not unique</value>
+  </data>
+  <data name="errNotUpdate" xml:space="preserve">
+    <value>can not update this item</value>
+  </data>
+  <data name="errPicture" xml:space="preserve">
+    <value>file not found</value>
+  </data>
+  <data name="errPictureFormat" xml:space="preserve">
+    <value>not correct format file</value>
+  </data>
+  <data name="errPrice" xml:space="preserve">
+    <value>not correct price</value>
+  </data>
+  <data name="errRange" xml:space="preserve">
+    <value>not correct range</value>
+  </data>
+  <data name="errTimeZoneNotFound" xml:space="preserve">
+    <value>timezone not found</value>
+  </data>
+  <data name="_elmah_monitor" xml:space="preserve">
+    <value>Elmah monitor</value>
+  </data>
+  <data name="_admin_addAuction" xml:space="preserve">
+    <value>Add auction</value>
+  </data>
+  <data name="_admin_auction_TLOCATION" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="_admin_auction_TNAME" xml:space="preserve">
+    <value>Auction name</value>
+  </data>
+  <data name="_admin_auction_TTYPE" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="_menu_auction" xml:space="preserve">
+    <value>Auction</value>
+  </data>
+  <data name="_admin_editAuction" xml:space="preserve">
+    <value>Edit auction</value>
+  </data>
+  <data name="_admin_removeAuction" xml:space="preserve">
+    <value>Remove auction</value>
+  </data>
+  <data name="_admin_removeAuction_Text" xml:space="preserve">
+    <value>Do you want to remove this object?</value>
+  </data>
+  <data name="_app_auction" xml:space="preserve">
+    <value>Auctions</value>
+  </data>
+  <data name="errAuctionNotFound" xml:space="preserve">
+    <value>Auction not found</value>
+  </data>
+  <data name="errOnlySymbol" xml:space="preserve">
+    <value>only symbols </value>
+  </data>
+  <data name="_app_adminPanel_Text" xml:space="preserve">
+    <value>You are logged into the admin panel</value>
+  </data>
+  <data name="_app_auctionHouse" xml:space="preserve">
+    <value>Auctions</value>
+  </data>
+  <data name="_app_EmptyProducts" xml:space="preserve">
+    <value>Sorry, but all items to end</value>
+  </data>
+  <data name="_app_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="_app_logOut" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="_app_SignIn" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="_app_TLetsGo" xml:space="preserve">
+    <value>Let's go</value>
+  </data>
+  <data name="_app_TLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="_app_TPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="_error404" xml:space="preserve">
+    <value>Page time out, may be delete or not exist</value>
+  </data>
+  <data name="_isNotFilled" xml:space="preserve">
+    <value>Is not filled</value>
+  </data>
+  <data name="_notAuthorized" xml:space="preserve">
+    <value>You are not authorized</value>
+  </data>
+  <data name="_notAuthorized_Text" xml:space="preserve">
+    <value>You are not allowed to see this page</value>
+  </data>
+  <data name="_notFound" xml:space="preserve">
+    <value>not found</value>
+  </data>
+  <data name="_NothingModerate" xml:space="preserve">
+    <value>Nothing Moderate</value>
+  </data>
+  <data name="_pageNotFound" xml:space="preserve">
+    <value>Page on url</value>
+  </data>
+  <data name="_profile_checkProduct" xml:space="preserve">
+    <value>Check product list</value>
+  </data>
+  <data name="_profile_checkWinnerList" xml:space="preserve">
+    <value>Check winning list</value>
+  </data>
+  <data name="_profile_createProduct" xml:space="preserve">
+    <value>Create product</value>
+  </data>
+  <data name="_profile_edit" xml:space="preserve">
+    <value>Edit profile</value>
+  </data>
+  <data name="_profile_TDESCRIPTION" xml:space="preserve">
+    <value>You can to change data and create model. Try it.</value>
+  </data>
+  <data name="_profile_TWELCOME" xml:space="preserve">
+    <value>Welcome to profile</value>
+  </data>
+  <data name="errOldPassword" xml:space="preserve">
+    <value>Old password not compare</value>
+  </data>
+  <data name="errPasswordCompare" xml:space="preserve">
+    <value>Old and new passwords compared</value>
+  </data>
+  <data name="_admin_editUserPassword" xml:space="preserve">
+    <value>Edit password</value>
+  </data>
+  <data name="_admin_user_NEWPASSWORD" xml:space="preserve">
+    <value>new password</value>
+  </data>
+  <data name="_admin_user_OLDPASSWORD" xml:space="preserve">
+    <value>old password</value>
+  </data>
+  <data name="_admin_user_REPEATPASSWORD" xml:space="preserve">
+    <value>repeat password</value>
+  </data>
+  <data name="_profile_changePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="_app_spa" xml:space="preserve">
+    <value>Spa</value>
+  </data>
+</root>

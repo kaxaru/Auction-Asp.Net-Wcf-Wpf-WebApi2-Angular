@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base href="/en-Us/Spa/">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single page app</title>
+    @Styles.Render("~/Content/semantic")
+    @Styles.Render("~/Content/ng-table.min.css")
+    @Styles.Render("~/Content/app.css?v4")
+    @Styles.Render("~/Content/header.css?v4")
+    @Styles.Render("~/Content/loading-bar.css")
+    @Styles.Render("~/Content/appSpa.css?v4")
+    @Styles.Render("~/Content/flipclock.css?v4")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body ng-cloak ng-app="spaApp">
+    <div id="preloader" class="preloader" ng-controller="PreloaderController" ng-show="check">Loading...</div>
+    <br>
+    <div class="ui grid">
+        <div class="computer tablet only row">
+            <div class="ui inverted fixed menu navbar page grid">
+                <div class="ui pointing link item">
+                    <a href="./#">App</a>
+                </div>
+                <div class="ui pointing dropdown link item"  ng-controller="AuctionsController">
+                    <span class="text">Auction</span>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                            <a href="./#Auction/{{auction.location}}" class="item" ng-repeat="auction in auctions"><span>{{auction.name}}</span></a>
+                    </div>
+                </div>
+                <div class="right menu" ng-controller="LoginController">
+                    <div class="ui buttons items" ng-if="!authorize">
+                        <a href="@Url.Action("Index", "Registration", new { area ="" , id = Guid.NewGuid() })" class="ui blue basic button">Sign-In</a>
+                        <div class="or"></div>
+                        <button class="ui basic button login green" ng-click="modal()">Login</button>
+                    </div>
+                    <div class="item profile" ng-if="authorize">
+                            <a href='./{{auction}}/Image/RenderImageUser/{{user.id}}'>
+                                <img class="ui home circular image" src="./../{{auction}}/Image/RenderImageUser/{{user.id}}">
+                            </a>
+                            <a class="home name" href="./#Profile">{{user.name +" "+ user.lastname}}</a>
+                            <a class="ui button basic red" ng-click="logout()">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <div class="ui basic modal loginModal" ng-controller="LoginPostController">
+        <form ng-submit="authorizeUser()" name="form" novalidate>
+            <i class="close icon" ng-click="close($event)"></i>
+            <div class="header">
+                Login
+            </div>
+            <div class="image content">
+                <div class="description ui grid">
+                    <div class="ui labeled input six wide column">
+                        <div class="ui label blue">
+                            Login
+                        </div>
+                        <input type="text" name="userName" ng-model='user.userName' ng-minlength="4" placeholder="username" required />
+                    </div>
+
+                    <div class="ui labeled input six wide column">
+                        <div class="ui label blue">
+                            Password
+                        </div>
+                        <input type="password" name="password" ng-model='user.password' ng-minlength="4" placeholder="password" required />
+                    </div>
+
+                    <div class="help-block">
+                        <div ng-show="form.userName.$dirty && form.userName.$error.required">Field userName required</div>
+                        <div ng-show="form.userName.$dirty && form.userName.$error.minlength">Field userName too short</div>
+                        <div ng-show="form.password.$dirty && form.password.$error.required">Field password required</div>
+                        <div ng-show="form.password.$dirty && form.password.$error.minlength">Field password too short</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="actions">
+                <div class="two fluid ui inverted buttons">
+                    <button class="ui red basic inverted button" type="submit" ng-disabled="form.$invalid">
+                        <i class="check icon"></i>
+                        Let's Go
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+      
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/semanticJs")
+    @Scripts.Render("~/Scripts/calendar.semantic-ui.js?v2")
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Scripts/angular-route.min.js")
+    @Scripts.Render("~/Scripts/angular-cookies.js")
+    @Scripts.Render("~/Scripts/angular-animate.js")
+    @Scripts.Render("~/Scripts/loading-bar.js")
+    @Scripts.Render("~/Scripts/Dropdown-angular.js")
+    @Scripts.Render("~/Scripts/ng-table.js?v3")
+    @Scripts.Render("~/Scripts/flipclock.js?v3")
+    @Scripts.Render("~/Scripts/spaApp.js?v2")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

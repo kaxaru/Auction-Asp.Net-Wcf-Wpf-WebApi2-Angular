@@ -1,0 +1,145 @@
+﻿.body-content{
+    padding-top:5em;
+}
+
+
+#lang input{
+    padding-left: 5.5em;
+}
+
+.half{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.center{
+    text-align:center;
+}
+
+.ui.card{
+    margin: 10px auto;
+    text-align:center;
+    font-size:14px;
+}
+
+.ui.card img{
+    width:250px;
+    margin: 10px auto;
+}
+
+.flip-clock-label{
+    font-size:28px;
+    text-indent:15px;
+    right:-110px;
+}
+
+.modal .content{
+    width: 100%;
+}
+
+.ui.modal input[type="text"],
+.ui.modal input[type="password"]{
+    width: 60%;
+    margin-left:-5px;
+    line-height: 1.1em;
+}
+
+.model .header{
+    font-family:600;
+    font-size:16px;
+    color: #0094ff;
+}
+
+.flip-clock-divider .flip-clock-label{
+    right: -150px !important;
+}
+
+.flip-clock-divider.minutes .flip-clock-label{
+    right: -120px !important
+}
+
+divider.seconds .flip-clock-label {
+    right: -135px !important;
+}
+
+.clock{
+    zoom: 0.5;
+    -moz-transform: scale(0.72);
+    -o-transform: scale(0.72);
+    transform: scale(0.72);
+}
+
+.column .button.attached{
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+/*Modal products*/
+
+.ui.modal.productsModal{
+    top:30%;
+}
+
+.productsModal .labeled{
+    margin: 1em;
+    line-height:40px;
+    display:block;
+}
+
+.productsModal .labeled:last-of-type{
+    display:inline-block;
+}
+
+.margin-default{
+    margin-top:3em;
+}
+
+.productsModal .labeled span{
+    margin-left:1em !important;
+}
+
+/*stilization placeholder*/
+.ui.input input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+.ui.input input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+.ui.input input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+.ui.input input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+.ui.input input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+.ui.input input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+.ui.input input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+.ui.input input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
+
+.field-validation-error{
+    position:relative;
+    left:10%;
+    color:red;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.image{
+    width:inherit;
+}
+
+.actions{
+    margin-top: 1.5em;
+}
+
+.image .description div{
+    margin: 0 auto;
+}
+
+.pagination{
+    margin-top: 2em;
+    margin-bottom: 3em;
+}

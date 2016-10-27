@@ -1,0 +1,91 @@
+﻿<UserControl x:Class="WPF.Views.CreateProductDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:viewModels="clr-namespace:WPF.ViewModels"
+        xmlns:local="clr-namespace:WPF.Views"
+        mc:Ignorable="d" d:Height="300" d:Width="400">
+
+    <UserControl.Resources>
+        <Style x:Key="TextCaption" TargetType="{x:Type TextBlock}">
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+        <Style x:Key="InputStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid Background="WhiteSmoke" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="400" Width="600">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource TextCaption}" 
+                   Text="Auction"/>
+        <ComboBox Grid.Column="1" Grid.Row="1" Margin="8" DisplayMemberPath="Name"
+                  ItemsSource="{Binding Auctions}" SelectedItem="{Binding DialogSelectedAuction}">
+            <dxmvvm:Interaction.Behaviors>
+                <dxmvvm:EventToCommand EventName="SelectionChanged" Command="{Binding DialogSelectedAuctionChangedCommand}"/>
+            </dxmvvm:Interaction.Behaviors>
+        </ComboBox>
+
+        <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource TextCaption}" 
+                   Text="Category"/>
+        <ComboBox Grid.Column="1" Grid.Row="2" Margin="8" DisplayMemberPath="Name"
+                  ItemsSource="{Binding DialogCategories}" SelectedItem="{Binding DialogSelectedCategory}">
+            <dxmvvm:Interaction.Behaviors>
+                <dxmvvm:EventToCommand EventName="SelectionChanged" Command="{Binding DialogSelectedCategoryChangedCommand}"/>
+            </dxmvvm:Interaction.Behaviors>
+        </ComboBox>
+
+        <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource TextCaption}" 
+                   Text="Duration"/>
+        <toolkit:DateTimePicker Grid.Column="1" Grid.Row="3" FontSize="20" Margin="8,0,8,0"
+                    VerticalAlignment="Center" HorizontalAlignment="Stretch" 
+                    Value="{Binding NewProductDuration}" AllowTextInput="False"/>
+        <TextBlock Grid.Column="0" Grid.Row="4" Style="{StaticResource TextCaption}" 
+                   Text="Start price"/>
+        <toolkit:IntegerUpDown Grid.Column="1" Grid.Row="4" FontSize="20" Margin="8"
+                 Value="{Binding NewProduct.StartPrice}"/>
+        <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource TextCaption}" 
+                   Text="Product Name"/>
+        <TextBox Grid.Column="1" Grid.Row="5" Style="{StaticResource InputStyle}" 
+                 Text="{Binding NewProduct.Name}"/>
+        <TextBlock Grid.Column="0" Grid.Row="6" Style="{StaticResource TextCaption}" 
+                   Text="Description"/>
+        <TextBox Grid.Column="1" Grid.Row="6" Grid.RowSpan="2" Style="{StaticResource InputStyle}" TextWrapping="Wrap"
+                 Text="{Binding NewProduct.Description}"/>
+        <Image Source="{Binding PreviewImageFileName}" Grid.Row="7" Grid.RowSpan="2" Grid.Column="0" Margin="56,0,0,0"></Image>
+        <Button Grid.Column="0" Grid.Row="8" Content="Image" Margin="8,8,30,8" HorizontalAlignment="Left"
+                Command="{Binding LoadImageCommand}"></Button>
+        <Grid Grid.Column="1" Grid.Row="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Create" Margin="8" Command="{Binding SaveNewProductCommand}"></Button>
+            <Button Grid.Column="1" Content="Close" Margin="8" Command="{Binding CancelCommand}"></Button>
+        </Grid>
+    </Grid>
+</UserControl>

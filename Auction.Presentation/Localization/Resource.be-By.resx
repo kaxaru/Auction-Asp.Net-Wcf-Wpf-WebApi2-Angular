@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="String1_admin_product_TPIC" xml:space="preserve">
+    <value>Малюнак </value>
+  </data>
+  <data name="_a" xml:space="preserve">
+    <value />
+  </data>
+  <data name="_admin_add" xml:space="preserve">
+    <value>Дабавіць</value>
+  </data>
+  <data name="_admin_addAuction" xml:space="preserve">
+    <value>Дабавіць аўкцыен</value>
+  </data>
+  <data name="_admin_addCategory" xml:space="preserve">
+    <value>Дадаць новую кацегорыю</value>
+  </data>
+  <data name="_admin_addProduct" xml:space="preserve">
+    <value>Дабавіць прадукт</value>
+  </data>
+  <data name="_admin_addUser" xml:space="preserve">
+    <value>Дадаць юзэра</value>
+  </data>
+  <data name="_admin_auction_TLOCATION" xml:space="preserve">
+    <value>Путь</value>
+  </data>
+  <data name="_admin_auction_TNAME" xml:space="preserve">
+    <value>Імя аўкцыена</value>
+  </data>
+  <data name="_admin_auction_TTYPE" xml:space="preserve">
+    <value>Тып базы </value>
+  </data>
+  <data name="_admin_backPage" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="_admin_category_TDESC" xml:space="preserve">
+    <value>Апісанне</value>
+  </data>
+  <data name="_admin_category_TNAME" xml:space="preserve">
+    <value>Імя</value>
+  </data>
+  <data name="_admin_edit" xml:space="preserve">
+    <value>Рэдагаваць</value>
+  </data>
+  <data name="_admin_editAuction" xml:space="preserve">
+    <value>Рэгадаваць аўкцыен</value>
+  </data>
+  <data name="_admin_editCategory" xml:space="preserve">
+    <value>Рэдагаваць кацегорыю</value>
+  </data>
+  <data name="_admin_editProduct" xml:space="preserve">
+    <value>Рэдагаваць прадукт</value>
+  </data>
+  <data name="_admin_editUser" xml:space="preserve">
+    <value>Рэгадаваць пользовацеля</value>
+  </data>
+  <data name="_admin_product_TDESC" xml:space="preserve">
+    <value>Апісанне</value>
+  </data>
+  <data name="_admin_product_TDURATION" xml:space="preserve">
+    <value>Перыяд</value>
+  </data>
+  <data name="_admin_product_TNAME" xml:space="preserve">
+    <value>Імя</value>
+  </data>
+  <data name="_admin_product_TSTATE" xml:space="preserve">
+    <value>Стан</value>
+  </data>
+  <data name="_admin_product_TSTDATE" xml:space="preserve">
+    <value>Дата продажу</value>
+  </data>
+  <data name="_admin_product_TSTPRICE" xml:space="preserve">
+    <value>Печатковы кошт</value>
+  </data>
+  <data name="_admin_remove" xml:space="preserve">
+    <value>Выдаліць</value>
+  </data>
+  <data name="_admin_removeAuction" xml:space="preserve">
+    <value>Выдаліць аўкцыен</value>
+  </data>
+  <data name="_admin_removeAuction_Text" xml:space="preserve">
+    <value>Вы хаціце выдаліць гэты аб'ект?</value>
+  </data>
+  <data name="_admin_removeCategory" xml:space="preserve">
+    <value>Выдаліць кацегорыю</value>
+  </data>
+  <data name="_admin_removeCategory_Text" xml:space="preserve">
+    <value>Вы хочаце выдаліць гэты аб'ект?</value>
+  </data>
+  <data name="_admin_removeProduct" xml:space="preserve">
+    <value>Выдаліць прадукт</value>
+  </data>
+  <data name="_admin_removeProduct_Text" xml:space="preserve">
+    <value>Вы хочаце выдаліць гэты аб'ект?</value>
+  </data>
+  <data name="_admin_save" xml:space="preserve">
+    <value>Сахраниць</value>
+  </data>
+  <data name="_admin_userRole_TNAME" xml:space="preserve">
+    <value>Імя ролі </value>
+  </data>
+  <data name="_admin_user_TDPASSWORD" xml:space="preserve">
+    <value>repeat password</value>
+  </data>
+  <data name="_admin_user_TFNAME" xml:space="preserve">
+    <value>Імя</value>
+  </data>
+  <data name="_admin_user_TLOCALE" xml:space="preserve">
+    <value>Локаль</value>
+  </data>
+  <data name="_admin_user_TLOGIN" xml:space="preserve">
+    <value>Логін</value>
+  </data>
+  <data name="_admin_user_TPASSWORD" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="_admin_user_TPIC" xml:space="preserve">
+    <value>Малюнак</value>
+  </data>
+  <data name="_admin_user_TRDATE" xml:space="preserve">
+    <value>Дата рэгістрацыі</value>
+  </data>
+  <data name="_admin_user_TSNAME" xml:space="preserve">
+    <value>Фамілія</value>
+  </data>
+  <data name="_admin_user_TTZ" xml:space="preserve">
+    <value>Часавы пояс</value>
+  </data>
+  <data name="_admin_welcome" xml:space="preserve">
+    <value>Вы патрапілі ў адміністрацыйную панэль</value>
+  </data>
+  <data name="_app" xml:space="preserve">
+    <value>Аўкцыён</value>
+  </data>
+  <data name="_app_about" xml:space="preserve">
+    <value>А праекце</value>
+  </data>
+  <data name="_app_adminPanel" xml:space="preserve">
+    <value>Адмінка</value>
+  </data>
+  <data name="_app_adminPanel_Text" xml:space="preserve">
+    <value>Вы вашлі ў адмін панель</value>
+  </data>
+  <data name="_app_auctionHouse" xml:space="preserve">
+    <value>Аўкціоны</value>
+  </data>
+  <data name="_app_category" xml:space="preserve">
+    <value>Кацегорыі</value>
+  </data>
+  <data name="_app_contact" xml:space="preserve">
+    <value>Кантакты</value>
+  </data>
+  <data name="_app_EmptyProducts" xml:space="preserve">
+    <value>Прабачце, але у зусіх прадуктах закончылось врэмя</value>
+  </data>
+  <data name="_app_Login" xml:space="preserve">
+    <value>Вайсці</value>
+  </data>
+  <data name="_app_logOut" xml:space="preserve">
+    <value>Выхад</value>
+  </data>
+  <data name="_app_moderate" xml:space="preserve">
+    <value>Мадэрыраваць</value>
+  </data>
+  <data name="_app_SignIn" xml:space="preserve">
+    <value>Зарэгістрыравацца</value>
+  </data>
+  <data name="_app_TLetsGo" xml:space="preserve">
+    <value>Вайсці</value>
+  </data>
+  <data name="_app_TLogin" xml:space="preserve">
+    <value>Логін</value>
+  </data>
+  <data name="_app_TPassword" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="_chooseLang" xml:space="preserve">
+    <value>Выберыце мову</value>
+  </data>
+  <data name="_elmah_monitor" xml:space="preserve">
+    <value>Маніторынг</value>
+  </data>
+  <data name="_error404" xml:space="preserve">
+    <value>Страніца устарэла, была выдалена, альбо ее не было. </value>
+  </data>
+  <data name="_isNotFilled" xml:space="preserve">
+    <value>Нічога няма</value>
+  </data>
+  <data name="_login" xml:space="preserve">
+    <value>Залагініцца</value>
+  </data>
+  <data name="_mainPage" xml:space="preserve">
+    <value>На галоўную</value>
+  </data>
+  <data name="_menu_about" xml:space="preserve">
+    <value>О нас</value>
+  </data>
+  <data name="_menu_admin" xml:space="preserve">
+    <value>Адміністраціўная панель</value>
+  </data>
+  <data name="_menu_category" xml:space="preserve">
+    <value>Кацегорыі</value>
+  </data>
+  <data name="_menu_contact" xml:space="preserve">
+    <value>Кантакты</value>
+  </data>
+  <data name="_menu_product" xml:space="preserve">
+    <value>Прадукты</value>
+  </data>
+  <data name="_menu_user" xml:space="preserve">
+    <value>Людзі</value>
+  </data>
+  <data name="_notAuthorized" xml:space="preserve">
+    <value>Вы не аўторызованы</value>
+  </data>
+  <data name="_notAuthorized_Text" xml:space="preserve">
+    <value>У вас няма дастаткова праў для паказа гэтай страніцы</value>
+  </data>
+  <data name="_notFound" xml:space="preserve">
+    <value>не знайдзена</value>
+  </data>
+  <data name="_NothingModerate" xml:space="preserve">
+    <value>Нічога мадарэраваць</value>
+  </data>
+  <data name="_pageNotFound" xml:space="preserve">
+    <value>Страніца по гэтаму пуці</value>
+  </data>
+  <data name="_profile_checkProduct" xml:space="preserve">
+    <value>Пасматрэць сваі прадукты</value>
+  </data>
+  <data name="_profile_checkWinnerList" xml:space="preserve">
+    <value>Пасматрэць выігранные лоты</value>
+  </data>
+  <data name="_profile_createProduct" xml:space="preserve">
+    <value>Саздаць прадукт</value>
+  </data>
+  <data name="_profile_edit" xml:space="preserve">
+    <value>Рэгадаваць профіль</value>
+  </data>
+  <data name="_profile_TDESCRIPTION" xml:space="preserve">
+    <value>Вам дазволена рэгадаваць сваі данные, альбо саздаваць прадукты для аўкцыена</value>
+  </data>
+  <data name="_profile_TWELCOME" xml:space="preserve">
+    <value>Вы зайшлі ў свой профіль</value>
+  </data>
+  <data name="_signIn" xml:space="preserve">
+    <value>Зарэгістрыравацца</value>
+  </data>
+  <data name="_state_banned" xml:space="preserve">
+    <value>Забанена</value>
+  </data>
+  <data name="_state_draft" xml:space="preserve">
+    <value>На модэрацыі</value>
+  </data>
+  <data name="_state_outdated" xml:space="preserve">
+    <value>Час закончыўся</value>
+  </data>
+  <data name="_state_selling" xml:space="preserve">
+    <value>На продажы</value>
+  </data>
+  <data name="_app_spa" xml:space="preserve">
+    <value>Спа</value>
+  </data>
+</root>

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Auction.Presentation.Areas.Admin.Models.AuctionViewModel>
+
+
+<div class="ui pointing dropdown link item">
+    <span class="text">@Resource._app_auctionHouse</span>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+        @foreach (var item in Model)
+        {
+            <a href="@Url.Action("Index","GetAuction", new { id = item.Name })" class="item">
+                @item.Name
+            </a>
+            <div class="divider"></div>
+        }
+    </div>
+</div>
+
+
+
+
+
+

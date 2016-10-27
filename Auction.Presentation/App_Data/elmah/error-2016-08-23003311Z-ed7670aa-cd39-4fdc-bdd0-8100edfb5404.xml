@@ -1,0 +1,173 @@
+﻿<error errorId="ed7670aa-cd39-4fdc-bdd0-8100edfb5404" host="KXRINS" type="System.Net.Sockets.SocketException" message="Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение [::1]:2247" source="System" detail="System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at http://localhost:2247/UserService/Storage.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---&gt; System.Net.WebException: Unable to connect to the remote server ---&gt; System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение [::1]:2247&#xD;&#xA;   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)&#xD;&#xA;   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket&amp; socket, IPAddress&amp; address, ConnectSocketState state, IAsyncResult asyncResult, Exception&amp; exception)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Net.HttpWebRequest.GetRequestStream(TransportContext&amp; context)&#xD;&#xA;   at System.Net.HttpWebRequest.GetRequestStream()&#xD;&#xA;   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;&#xD;&#xA;Server stack trace: &#xD;&#xA;   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()&#xD;&#xA;   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)&#xD;&#xA;   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)&#xD;&#xA;   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)&#xD;&#xA;   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)&#xD;&#xA;&#xD;&#xA;Exception rethrown at [0]: &#xD;&#xA;   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)&#xD;&#xA;   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData&amp; msgData, Int32 type)&#xD;&#xA;   at Auction.Presentation.RemoteStorage.IJsonService.CreateJson(String folder, String model)&#xD;&#xA;   at Auction.Presentation.RemoteStorage.JsonServiceClient.CreateJson(String folder, String model) in F:\epam\Auction\Auction.Presentation\Service References\RemoteStorage\Reference.cs:line 415&#xD;&#xA;   at Auction.Presentation.Infrastructure.Authentication.CustomUserManager.Create(IdentityFactoryOptions`1 options, IOwinContext context) in F:\epam\Auction\Auction.Presentation\Infrastructure\Authentication\CustomUserManager.cs:line 33&#xD;&#xA;   at Microsoft.AspNet.Identity.Owin.IdentityFactoryProvider`1.Create(IdentityFactoryOptions`1 options, IOwinContext context)&#xD;&#xA;   at Microsoft.AspNet.Identity.Owin.IdentityFactoryMiddleware`2.&lt;Invoke&gt;d__0.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContextStage.&lt;RunApp&gt;d__5.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContext.&lt;DoFinalWork&gt;d__2.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.Infrastructure.ErrorState.Rethrow()&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.StageAsyncResult.End(IAsyncResult ar)&#xD;&#xA;   at Microsoft.Owin.Host.SystemWeb.IntegratedPipeline.IntegratedPipelineContext.EndFinalWork(IAsyncResult ar)&#xD;&#xA;   at System.Web.HttpApplication.AsyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" time="2016-08-23T00:33:11.1289288Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:image/webp,image/*,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:User=%7b%22Id%22%3a%22d6cd6eab-b140-4950-a2a2-6f473a547522%22%2c%22UserName%22%3a%22user%22%2c%22Password%22%3a%22%22%2c%22Locale%22%3a%22en-Us%22%2c%22TimezoneId%22%3a%22Central+Pacific+Standard+Time%22%2c%22Picture%22%3a%22%22%2c%22FirstName%22%3a%22user%22%2c%22LastName%22%3a%22user%22%2c%22RegistrationDate%22%3a%222016-08-21T01%3a23%3a06.8270217%2b03%3a00%22%2c%22FullName%22%3a%22user+user%22%7d; .AspNet.ApplicationCookie=p3U-JPNlTA0KbMSsvaEH77hNMOMweTr-q-CBDggyWsPHplXdimVtUp8lIPUWtwbmgYWqTYpIolEKKmdre8FojmQ0oLTgcsIOEYZ1w4YJvZarMdptDfy50Kbz70SfCGmtpHXZFcAwKDCS-s2GyIBMeFfjKbEK1ssd4x3w-76sXe77VRe83SDxlffUXncvAb4HkfnjBTSfsQ-zOVl2Reh00VSUHVJDoEVllv4niHgT8Yp7dhBO4ZltdFtrA--Rf0dSldySVpLErHcvXFFkPiehx2rBNMsyMpHO2DsIOo0uoYwb_oiQXBnfjBv17isNL3bYRJOADPYEEdWOAAusL9RAOZZrNk_dPUGKsXvEzgLvfStqmeK88i5DXl7oS4RtbH4IzrLx1dyuiPTQA9sH44btXJjpkk2c2ecXnl6UrtLE25ovEpnI2y4CRMsPDopYy35xMOoy0RfxzkpBJE-DdQuW2prSM1Jk0F7XROG44lHyCV4&#xD;&#xA;HTTP_HOST:localhost:6997&#xD;&#xA;HTTP_REFERER:http://localhost:6997/&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: image/webp,image/*,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch&#xD;&#xA;Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: User=%7b%22Id%22%3a%22d6cd6eab-b140-4950-a2a2-6f473a547522%22%2c%22UserName%22%3a%22user%22%2c%22Password%22%3a%22%22%2c%22Locale%22%3a%22en-Us%22%2c%22TimezoneId%22%3a%22Central+Pacific+Standard+Time%22%2c%22Picture%22%3a%22%22%2c%22FirstName%22%3a%22user%22%2c%22LastName%22%3a%22user%22%2c%22RegistrationDate%22%3a%222016-08-21T01%3a23%3a06.8270217%2b03%3a00%22%2c%22FullName%22%3a%22user+user%22%7d; .AspNet.ApplicationCookie=p3U-JPNlTA0KbMSsvaEH77hNMOMweTr-q-CBDggyWsPHplXdimVtUp8lIPUWtwbmgYWqTYpIolEKKmdre8FojmQ0oLTgcsIOEYZ1w4YJvZarMdptDfy50Kbz70SfCGmtpHXZFcAwKDCS-s2GyIBMeFfjKbEK1ssd4x3w-76sXe77VRe83SDxlffUXncvAb4HkfnjBTSfsQ-zOVl2Reh00VSUHVJDoEVllv4niHgT8Yp7dhBO4ZltdFtrA--Rf0dSldySVpLErHcvXFFkPiehx2rBNMsyMpHO2DsIOo0uoYwb_oiQXBnfjBv17isNL3bYRJOADPYEEdWOAAusL9RAOZZrNk_dPUGKsXvEzgLvfStqmeK88i5DXl7oS4RtbH4IzrLx1dyuiPTQA9sH44btXJjpkk2c2ecXnl6UrtLE25ovEpnI2y4CRMsPDopYy35xMOoy0RfxzkpBJE-DdQuW2prSM1Jk0F7XROG44lHyCV4&#xD;&#xA;Host: localhost:6997&#xD;&#xA;Referer: http://localhost:6997/&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="F:\epam\Auction\Auction.Presentation\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/en-Us/Auction1/Image/RenderImageProduct/90f05a0c-c0f8-499d-a673-552ae4ce1cf5" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="F:\epam\Auction\Auction.Presentation\en-Us\Auction1\Image\RenderImageProduct\90f05a0c-c0f8-499d-a673-552ae4ce1cf5" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="auctionId=Auction1" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="38597" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/en-Us/Auction1/Image/RenderImageProduct/90f05a0c-c0f8-499d-a673-552ae4ce1cf5" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="6997" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/en-Us/Auction1/Image/RenderImageProduct/90f05a0c-c0f8-499d-a673-552ae4ce1cf5" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="image/webp,image/*,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="User=%7b%22Id%22%3a%22d6cd6eab-b140-4950-a2a2-6f473a547522%22%2c%22UserName%22%3a%22user%22%2c%22Password%22%3a%22%22%2c%22Locale%22%3a%22en-Us%22%2c%22TimezoneId%22%3a%22Central+Pacific+Standard+Time%22%2c%22Picture%22%3a%22%22%2c%22FirstName%22%3a%22user%22%2c%22LastName%22%3a%22user%22%2c%22RegistrationDate%22%3a%222016-08-21T01%3a23%3a06.8270217%2b03%3a00%22%2c%22FullName%22%3a%22user+user%22%7d; .AspNet.ApplicationCookie=p3U-JPNlTA0KbMSsvaEH77hNMOMweTr-q-CBDggyWsPHplXdimVtUp8lIPUWtwbmgYWqTYpIolEKKmdre8FojmQ0oLTgcsIOEYZ1w4YJvZarMdptDfy50Kbz70SfCGmtpHXZFcAwKDCS-s2GyIBMeFfjKbEK1ssd4x3w-76sXe77VRe83SDxlffUXncvAb4HkfnjBTSfsQ-zOVl2Reh00VSUHVJDoEVllv4niHgT8Yp7dhBO4ZltdFtrA--Rf0dSldySVpLErHcvXFFkPiehx2rBNMsyMpHO2DsIOo0uoYwb_oiQXBnfjBv17isNL3bYRJOADPYEEdWOAAusL9RAOZZrNk_dPUGKsXvEzgLvfStqmeK88i5DXl7oS4RtbH4IzrLx1dyuiPTQA9sH44btXJjpkk2c2ecXnl6UrtLE25ovEpnI2y4CRMsPDopYy35xMOoy0RfxzkpBJE-DdQuW2prSM1Jk0F7XROG44lHyCV4" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:6997" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:6997/" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="auctionId">
+      <value string="Auction1" />
+    </item>
+  </queryString>
+  <cookies>
+    <item name="User">
+      <value string="%7b%22Id%22%3a%22d6cd6eab-b140-4950-a2a2-6f473a547522%22%2c%22UserName%22%3a%22user%22%2c%22Password%22%3a%22%22%2c%22Locale%22%3a%22en-Us%22%2c%22TimezoneId%22%3a%22Central+Pacific+Standard+Time%22%2c%22Picture%22%3a%22%22%2c%22FirstName%22%3a%22user%22%2c%22LastName%22%3a%22user%22%2c%22RegistrationDate%22%3a%222016-08-21T01%3a23%3a06.8270217%2b03%3a00%22%2c%22FullName%22%3a%22user+user%22%7d" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="p3U-JPNlTA0KbMSsvaEH77hNMOMweTr-q-CBDggyWsPHplXdimVtUp8lIPUWtwbmgYWqTYpIolEKKmdre8FojmQ0oLTgcsIOEYZ1w4YJvZarMdptDfy50Kbz70SfCGmtpHXZFcAwKDCS-s2GyIBMeFfjKbEK1ssd4x3w-76sXe77VRe83SDxlffUXncvAb4HkfnjBTSfsQ-zOVl2Reh00VSUHVJDoEVllv4niHgT8Yp7dhBO4ZltdFtrA--Rf0dSldySVpLErHcvXFFkPiehx2rBNMsyMpHO2DsIOo0uoYwb_oiQXBnfjBv17isNL3bYRJOADPYEEdWOAAusL9RAOZZrNk_dPUGKsXvEzgLvfStqmeK88i5DXl7oS4RtbH4IzrLx1dyuiPTQA9sH44btXJjpkk2c2ecXnl6UrtLE25ovEpnI2y4CRMsPDopYy35xMOoy0RfxzkpBJE-DdQuW2prSM1Jk0F7XROG44lHyCV4" />
+    </item>
+  </cookies>
+</error>

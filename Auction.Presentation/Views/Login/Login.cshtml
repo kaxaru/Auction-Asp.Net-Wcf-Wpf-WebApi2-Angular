@@ -1,0 +1,66 @@
+﻿@model Auction.Presentation.Models.LoginViewModel
+
+@if (User != null && !User.Identity.IsAuthenticated)
+{
+    <div class="ui buttons items">
+        <a href="@Url.Action("Index", "Registration", new {id = Guid.NewGuid() })" class="ui blue basic button" >@Resource._app_SignIn</a>
+        <div class="or"></div>
+        <button class="ui basic button login green">@Resource._app_Login</button>
+    </div>
+}
+else
+{
+    
+        var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
+        var claimId = claimsIdentity.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+    <div class="item profile">
+        <a href="@Url.Action("RenderImageUser", "Image", new {id = claimId.Value})">
+            <img class="ui home circular image" src="@Url.Action("RenderImageUser", "Image", new {id = claimId.Value})" >
+        </a>
+        @Html.ActionLink(@claimsIdentity.Name, "Index", "Profile", new { id = claimId.Value }, new { @class = "home name" })
+        @Html.ActionLink(Resource._app_logOut, "Logout", "Login", new {id = 1 },  new {@class ="ui button basic red"})
+   </div>
+}
+
+
+    <div class="ui basic modal loginModal">
+        @using (Html.BeginForm("LoginToPost", "Login",new {id = "new" }, FormMethod.Post, new { @class = "ui form" }))
+        {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <i class="close icon"></i>
+            <div class="header">
+                @Resource._app_Login
+            </div>
+            <div class="image content">
+                <div class="description ui grid">
+                    <div class="ui labeled input six wide column">
+                        <div class="ui label blue">
+                            @Resource._app_TLogin
+                        </div>
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "User name" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                
+                    <div class="ui labeled input six wide column">
+                        <div class="ui label blue">
+                            @Resource._app_TPassword
+                        </div>
+                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "Password", type = "password" })
+                        <div>
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="two fluid ui inverted buttons">
+                    <button class="ui red basic inverted button" type="submit">
+                        <i class="check icon"></i>
+                        @Resource._app_TLetsGo
+                    </button>
+                </div>
+            </div>
+        }
+    </div>

@@ -1,0 +1,10 @@
+2016-08-22 09:00:01.2428|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - 4286f6ca-1234-4a58-a04e-dd307db35f9e, username -admin, timezone - Afghanistan Standard Time
+2016-08-22 09:00:10.2953|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-22 09:00:14.6526|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-22 09:00:25.5472|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-22 10:51:05.7150|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-22 10:51:15.0905|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-22 10:55:02.7136|INFO|Auction.Presentation.Controllers.ProfileController|user created product on auction - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-22 10:55:40.2437|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - d6cd6eab-b140-4950-a2a2-6f473a547522, username -user, timezone - Central Pacific Standard Time
+2016-08-22 10:55:52.3534|INFO|Auction.Presentation.Controllers.LoginController|user logged with id - 4286f6ca-1234-4a58-a04e-dd307db35f9e, username -admin, timezone - Afghanistan Standard Time
+2016-08-22 12:25:06.4956|INFO|Auction.Presentation.Controllers.BidController|user make to bid on product  - 4286f6ca-1234-4a58-a04e-dd307db35f9e, username -admin admin, timezone - Afghanistan Standard Time, auction - Auction.Presentation.Infrastructure.ÑustomSettings.AuctionHouseElement , productId - 0c77a0c8-323d-4203-ac0f-f965b76487f5

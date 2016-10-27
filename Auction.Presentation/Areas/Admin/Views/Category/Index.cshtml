@@ -1,0 +1,49 @@
+﻿@model Dictionary<string, IEnumerable<Auction.Presentation.Models.CategoryViewModel>>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminView.cshtml";
+}
+
+<h2>@Resource._menu_category</h2>
+<hr />
+
+@Html.ActionLink(Resource._admin_addCategory, "Create", "Category", new { }, new { @class = "ui blue basic button" })
+
+@foreach(KeyValuePair<string, IEnumerable<Auction.Presentation.Models.CategoryViewModel>> categories in Model)
+{
+    <h2>@categories.Key</h2>
+    if(categories.Value.FirstOrDefault() != null)
+    {
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th>@Resource._admin_category_TNAME</th>
+                <th>@Resource._admin_category_TDESC</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        
+            @foreach (var category in categories.Value)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => category.Name)</td>
+                    <td>@Html.DisplayFor(model => category.Description)</td>
+                    <td>
+                        @Html.ActionLink(Resource._admin_edit, "Edit", "Category", new { id = category.Id, auctionId = categories.Key }, new { @class = "ui green basic button" })
+                    </td>
+                    <td>
+                        @Html.ActionLink(Resource._admin_remove, "Delete", "Category", new { id = category.Id, auctionId = categories.Key }, new { @class = "ui red basic button" })
+                    </td>
+                </tr>
+            }
+        
+    </table>
+    }
+    else
+    {
+        <div><h2 class="center">@Resource._isNotFilled</h2></div>
+    }
+}
+
+

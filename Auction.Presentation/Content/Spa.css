@@ -1,0 +1,17 @@
+﻿form[novalidate] input{
+    border-left-width: 8px;
+    border-color: #3498db;
+    border-style: solid;
+}
+
+input[required].ng-pristine{
+    border-color: #e74c3c;
+}
+
+input.ng-invalid.ng-dirty {
+    border-color: #e74c3c;
+}
+
+input.ng-valid.ng-dirty {
+    border-color: #3ecc71;
+}

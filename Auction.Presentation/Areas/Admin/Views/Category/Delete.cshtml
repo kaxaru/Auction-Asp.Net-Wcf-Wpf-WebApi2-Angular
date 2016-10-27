@@ -1,0 +1,39 @@
+﻿@model Auction.Presentation.Models.CategoryViewModel
+@{
+    ViewBag.Title = "Remove";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminView.cshtml";
+}
+
+<h2>@Resource._admin_removeCategory</h2>
+<hr />
+<p class="error">@ViewBag.ErrorMessage</p>
+<h3 class="ui red">@Resource._admin_removeCategory_Text</h3>
+<div class="ui list">
+
+    <div class="item">
+        @Resource._admin_auction_TNAME:  @ViewBag.Auction.Name
+    </div>
+
+    <div class="item">
+        @Resource._admin_category_TNAME:  @Html.DisplayFor(model => model.Name)
+    </div>
+    <div class="item">
+        @Resource._admin_category_TDESC:  @Html.DisplayFor(model => model.Description)
+    </div>
+
+</div>
+
+@using (Html.BeginForm())
+{
+
+    <div class="ui form">
+        <div class="field">
+            <input type="submit" value=@Resource._admin_remove class="ui button basic red " />
+        </div>
+    </div>
+}
+
+
+<div class="link">
+    @Html.ActionLink(Resource._admin_backPage, "Index", new { }, new { @class = "ui button basic blue" })
+</div>

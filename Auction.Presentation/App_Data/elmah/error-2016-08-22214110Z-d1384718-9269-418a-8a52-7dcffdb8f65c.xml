@@ -1,0 +1,165 @@
+﻿<error errorId="d1384718-9269-418a-8a52-7dcffdb8f65c" host="KXRINS" type="System.ServiceModel.CommunicationException" message="An error occurred while receiving the HTTP response to http://localhost:2247/UserService/Storage.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details." source="System.ServiceModel.Internals" detail="System.AggregateException: One or more errors occurred. ---&gt; System.AggregateException: One or more errors occurred. ---&gt; System.ServiceModel.CommunicationException: An error occurred while receiving the HTTP response to http://localhost:2247/UserService/Storage.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details. ---&gt; System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---&gt; System.IO.IOException: Unable to read data from the transport connection: Удаленный хост принудительно разорвал существующее подключение. ---&gt; System.Net.Sockets.SocketException: Удаленный хост принудительно разорвал существующее подключение&#xD;&#xA;   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)&#xD;&#xA;   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.&lt;&gt;c__DisplayClass7_0`1.&lt;CreateGenericTask&gt;b__0(IAsyncResult asyncResult)&#xD;&#xA;   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)&#xD;&#xA;   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)&#xD;&#xA;   at System.Threading.Tasks.Task`1.get_Result()&#xD;&#xA;   at Auction.Presentation.Infrastructure.Authentication.CustomUserStore.&lt;&gt;c__DisplayClass10_0.&lt;QueryAsync&gt;b__0() in F:\epam\Auction\Auction.Presentation\Infrastructure\Authentication\CustomUserStore.cs:line 71&#xD;&#xA;   at System.Threading.Tasks.Task`1.InnerInvoke()&#xD;&#xA;   at System.Threading.Tasks.Task.Execute()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Auction.Presentation.Infrastructure.Authentication.CustomUserStore.&lt;QueryAsync&gt;d__10.MoveNext() in F:\epam\Auction\Auction.Presentation\Infrastructure\Authentication\CustomUserStore.cs:line 80&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)&#xD;&#xA;   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)&#xD;&#xA;   at System.Threading.Tasks.Task`1.get_Result()&#xD;&#xA;   at Auction.Presentation.Infrastructure.Authentication.CustomUserManager.&lt;&gt;c.&lt;GetAllUsersAsync&gt;b__15_0() in F:\epam\Auction\Auction.Presentation\Infrastructure\Authentication\CustomUserManager.cs:line 221&#xD;&#xA;   at System.Threading.Tasks.Task`1.InnerInvoke()&#xD;&#xA;   at System.Threading.Tasks.Task.Execute()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Auction.Presentation.Infrastructure.Authentication.CustomUserManager.&lt;GetAllUsersAsync&gt;d__15.MoveNext() in F:\epam\Auction\Auction.Presentation\Infrastructure\Authentication\CustomUserManager.cs:line 232&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Auction.Presentation.Controllers.HomeController.&lt;Index&gt;d__9.MoveNext() in F:\epam\Auction\Auction.Presentation\Controllers\HomeController.cs:line 87&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()&#xD;&#xA;   at System.Threading.Tasks.TaskHelpersExtensions.ThrowIfFaulted(Task task)&#xD;&#xA;   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass37.&lt;BeginInvokeAsynchronousActionMethod&gt;b__36(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3d()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.&lt;&gt;c__DisplayClass46.&lt;InvokeActionMethodFilterAsynchronouslyRecursive&gt;b__3f()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass33.&lt;BeginInvokeActionMethodWithFilters&gt;b__32(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;&gt;c__DisplayClass2b.&lt;BeginInvokeAction&gt;b__1c()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass21.&lt;BeginInvokeAction&gt;b__1e(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecuteCore&gt;b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.&lt;BeginExecute&gt;b__15(IAsyncResult asyncResult, Controller controller)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.&lt;BeginProcessRequest&gt;b__5(IAsyncResult asyncResult, ProcessRequestState innerState)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.OnAsyncHandlerCompletion(IAsyncResult ar)&#xD;&#xA;---&gt; (Inner Exception #0) System.AggregateException: One or more errors occurred. ---&gt; System.ServiceModel.CommunicationException: An error occurred while receiving the HTTP response to http://localhost:2247/UserService/Storage.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details. ---&gt; System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---&gt; System.IO.IOException: Unable to read data from the transport connection: Удаленный хост принудительно разорвал существующее подключение. ---&gt; System.Net.Sockets.SocketException: Удаленный хост принудительно разорвал существующее подключение&#xD;&#xA;   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)&#xD;&#xA;   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.&lt;&gt;c__DisplayClass7_0`1.&lt;CreateGenericTask&gt;b__0(IAsyncResult asyncResult)&#xD;&#xA;   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)&#xD;&#xA;   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)&#xD;&#xA;   at System.Threading.Tasks.Task`1.get_Result()&#xD;&#xA;   at Auction.Presentation.Infrastructure.Authentication.CustomUserStore.&lt;&gt;c__DisplayClass10_0.&lt;QueryAsync&gt;b__0() in F:\epam\Auction\Auction.Presentation\Infrastructure\Authentication\CustomUserStore.cs:line 71&#xD;&#xA;   at System.Threading.Tasks.Task`1.InnerInvoke()&#xD;&#xA;   at System.Threading.Tasks.Task.Execute()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)&#xD;&#xA;   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()&#xD;&#xA;   at Auction.Presentation.Infrastructure.Authentication.CustomUserStore.&lt;QueryAsync&gt;d__10.MoveNext() in F:\epam\Auction\Auction.Presentation\Infrastructure\Authentication\CustomUserStore.cs:line 80&#xD;&#xA;---&gt; (Inner Exception #0) System.ServiceModel.CommunicationException: An error occurred while receiving the HTTP response to http://localhost:2247/UserService/Storage.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down). See server logs for more details. ---&gt; System.Net.WebException: The underlying connection was closed: An unexpected error occurred on a receive. ---&gt; System.IO.IOException: Unable to read data from the transport connection: Удаленный хост принудительно разорвал существующее подключение. ---&gt; System.Net.Sockets.SocketException: Удаленный хост принудительно разорвал существующее подключение&#xD;&#xA;   at System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.PooledStream.EndRead(IAsyncResult asyncResult)&#xD;&#xA;   at System.Net.Connection.ReadCallback(IAsyncResult asyncResult)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)&#xD;&#xA;   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelAsyncRequest.CompleteGetResponse(IAsyncResult result)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)&#xD;&#xA;   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.&lt;&gt;c__DisplayClass7_0`1.&lt;CreateGenericTask&gt;b__0(IAsyncResult asyncResult)&#xD;&#xA;   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)&lt;---&#xD;&#xA;&lt;---&#xD;&#xA;" user="admin" time="2016-08-22T21:41:10.4509288Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:User=%7b%22Id%22%3a%22d6cd6eab-b140-4950-a2a2-6f473a547522%22%2c%22UserName%22%3a%22user%22%2c%22Password%22%3a%22%22%2c%22Locale%22%3a%22en-Us%22%2c%22TimezoneId%22%3a%22Central+Pacific+Standard+Time%22%2c%22Picture%22%3a%22%22%2c%22FirstName%22%3a%22user%22%2c%22LastName%22%3a%22user%22%2c%22RegistrationDate%22%3a%222016-08-21T01%3a23%3a06.8270217%2b03%3a00%22%2c%22FullName%22%3a%22user+user%22%7d; .AspNet.ApplicationCookie=p3U-JPNlTA0KbMSsvaEH77hNMOMweTr-q-CBDggyWsPHplXdimVtUp8lIPUWtwbmgYWqTYpIolEKKmdre8FojmQ0oLTgcsIOEYZ1w4YJvZarMdptDfy50Kbz70SfCGmtpHXZFcAwKDCS-s2GyIBMeFfjKbEK1ssd4x3w-76sXe77VRe83SDxlffUXncvAb4HkfnjBTSfsQ-zOVl2Reh00VSUHVJDoEVllv4niHgT8Yp7dhBO4ZltdFtrA--Rf0dSldySVpLErHcvXFFkPiehx2rBNMsyMpHO2DsIOo0uoYwb_oiQXBnfjBv17isNL3bYRJOADPYEEdWOAAusL9RAOZZrNk_dPUGKsXvEzgLvfStqmeK88i5DXl7oS4RtbH4IzrLx1dyuiPTQA9sH44btXJjpkk2c2ecXnl6UrtLE25ovEpnI2y4CRMsPDopYy35xMOoy0RfxzkpBJE-DdQuW2prSM1Jk0F7XROG44lHyCV4&#xD;&#xA;HTTP_HOST:localhost:6997&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch&#xD;&#xA;Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: User=%7b%22Id%22%3a%22d6cd6eab-b140-4950-a2a2-6f473a547522%22%2c%22UserName%22%3a%22user%22%2c%22Password%22%3a%22%22%2c%22Locale%22%3a%22en-Us%22%2c%22TimezoneId%22%3a%22Central+Pacific+Standard+Time%22%2c%22Picture%22%3a%22%22%2c%22FirstName%22%3a%22user%22%2c%22LastName%22%3a%22user%22%2c%22RegistrationDate%22%3a%222016-08-21T01%3a23%3a06.8270217%2b03%3a00%22%2c%22FullName%22%3a%22user+user%22%7d; .AspNet.ApplicationCookie=p3U-JPNlTA0KbMSsvaEH77hNMOMweTr-q-CBDggyWsPHplXdimVtUp8lIPUWtwbmgYWqTYpIolEKKmdre8FojmQ0oLTgcsIOEYZ1w4YJvZarMdptDfy50Kbz70SfCGmtpHXZFcAwKDCS-s2GyIBMeFfjKbEK1ssd4x3w-76sXe77VRe83SDxlffUXncvAb4HkfnjBTSfsQ-zOVl2Reh00VSUHVJDoEVllv4niHgT8Yp7dhBO4ZltdFtrA--Rf0dSldySVpLErHcvXFFkPiehx2rBNMsyMpHO2DsIOo0uoYwb_oiQXBnfjBv17isNL3bYRJOADPYEEdWOAAusL9RAOZZrNk_dPUGKsXvEzgLvfStqmeK88i5DXl7oS4RtbH4IzrLx1dyuiPTQA9sH44btXJjpkk2c2ecXnl6UrtLE25ovEpnI2y4CRMsPDopYy35xMOoy0RfxzkpBJE-DdQuW2prSM1Jk0F7XROG44lHyCV4&#xD;&#xA;Host: localhost:6997&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="F:\epam\Auction\Auction.Presentation\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="admin" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="admin" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="admin" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="F:\epam\Auction\Auction.Presentation" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="28802" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="6997" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="User=%7b%22Id%22%3a%22d6cd6eab-b140-4950-a2a2-6f473a547522%22%2c%22UserName%22%3a%22user%22%2c%22Password%22%3a%22%22%2c%22Locale%22%3a%22en-Us%22%2c%22TimezoneId%22%3a%22Central+Pacific+Standard+Time%22%2c%22Picture%22%3a%22%22%2c%22FirstName%22%3a%22user%22%2c%22LastName%22%3a%22user%22%2c%22RegistrationDate%22%3a%222016-08-21T01%3a23%3a06.8270217%2b03%3a00%22%2c%22FullName%22%3a%22user+user%22%7d; .AspNet.ApplicationCookie=p3U-JPNlTA0KbMSsvaEH77hNMOMweTr-q-CBDggyWsPHplXdimVtUp8lIPUWtwbmgYWqTYpIolEKKmdre8FojmQ0oLTgcsIOEYZ1w4YJvZarMdptDfy50Kbz70SfCGmtpHXZFcAwKDCS-s2GyIBMeFfjKbEK1ssd4x3w-76sXe77VRe83SDxlffUXncvAb4HkfnjBTSfsQ-zOVl2Reh00VSUHVJDoEVllv4niHgT8Yp7dhBO4ZltdFtrA--Rf0dSldySVpLErHcvXFFkPiehx2rBNMsyMpHO2DsIOo0uoYwb_oiQXBnfjBv17isNL3bYRJOADPYEEdWOAAusL9RAOZZrNk_dPUGKsXvEzgLvfStqmeK88i5DXl7oS4RtbH4IzrLx1dyuiPTQA9sH44btXJjpkk2c2ecXnl6UrtLE25ovEpnI2y4CRMsPDopYy35xMOoy0RfxzkpBJE-DdQuW2prSM1Jk0F7XROG44lHyCV4" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:6997" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="User">
+      <value string="%7b%22Id%22%3a%22d6cd6eab-b140-4950-a2a2-6f473a547522%22%2c%22UserName%22%3a%22user%22%2c%22Password%22%3a%22%22%2c%22Locale%22%3a%22en-Us%22%2c%22TimezoneId%22%3a%22Central+Pacific+Standard+Time%22%2c%22Picture%22%3a%22%22%2c%22FirstName%22%3a%22user%22%2c%22LastName%22%3a%22user%22%2c%22RegistrationDate%22%3a%222016-08-21T01%3a23%3a06.8270217%2b03%3a00%22%2c%22FullName%22%3a%22user+user%22%7d" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="p3U-JPNlTA0KbMSsvaEH77hNMOMweTr-q-CBDggyWsPHplXdimVtUp8lIPUWtwbmgYWqTYpIolEKKmdre8FojmQ0oLTgcsIOEYZ1w4YJvZarMdptDfy50Kbz70SfCGmtpHXZFcAwKDCS-s2GyIBMeFfjKbEK1ssd4x3w-76sXe77VRe83SDxlffUXncvAb4HkfnjBTSfsQ-zOVl2Reh00VSUHVJDoEVllv4niHgT8Yp7dhBO4ZltdFtrA--Rf0dSldySVpLErHcvXFFkPiehx2rBNMsyMpHO2DsIOo0uoYwb_oiQXBnfjBv17isNL3bYRJOADPYEEdWOAAusL9RAOZZrNk_dPUGKsXvEzgLvfStqmeK88i5DXl7oS4RtbH4IzrLx1dyuiPTQA9sH44btXJjpkk2c2ecXnl6UrtLE25ovEpnI2y4CRMsPDopYy35xMOoy0RfxzkpBJE-DdQuW2prSM1Jk0F7XROG44lHyCV4" />
+    </item>
+  </cookies>
+</error>

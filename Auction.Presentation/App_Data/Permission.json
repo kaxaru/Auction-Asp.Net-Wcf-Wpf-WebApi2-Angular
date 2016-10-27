@@ -1,0 +1,254 @@
+{
+  "$type": "System.Collections.Generic.List`1[[Auction.DataAccess.Models.JsonModel, Auction.DataAccess]], mscorlib",
+  "$values": [
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "4286f6ca-1234-4a58-a04e-dd307db35f9e",
+      "Role": 3,
+      "AuctionId": null,
+      "CategoriesId": null,
+      "Id": "153f0e49-f336-4f2c-ba03-c5ac7cc67358",
+      "UpdateOn": "2016-08-21T01:24:42.4984938+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "7d198de7-0a25-45f6-a2fe-d65143c6a39d",
+      "Role": 1,
+      "AuctionId": "Auction3",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "b178b528-2425-4d20-8ad0-5360a67e243e",
+      "UpdateOn": "2016-08-21T01:24:42.4984938+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "7d198de7-0a25-45f6-a2fe-d65143c6a39d",
+      "Role": 2,
+      "AuctionId": "Auction1",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "b178b528-2425-4d20-8ad0-5360a67e243e",
+      "UpdateOn": "2016-08-21T01:24:42.4984938+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "7d198de7-0a25-45f6-a2fe-d65143c6a39d",
+      "Role": 1,
+      "AuctionId": "Auction2",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "b178b528-2425-4d20-8ad0-5360a67e243e",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "7d198de7-0a25-45f6-a2fe-d65143c6a39d",
+      "Role": 1,
+      "AuctionId": "auction6",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "b178b528-2425-4d20-8ad0-5360a67e243e",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "7d198de7-0a25-45f6-a2fe-d65143c6a39d",
+      "Role": 1,
+      "AuctionId": "Auction4",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "b178b528-2425-4d20-8ad0-5360a67e243e",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "aeeaa9dc-9dd7-4f88-9279-cefde7b76cb0",
+      "Role": 1,
+      "AuctionId": "Auction3",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "77bc3f1f-2dc3-4d05-b582-69a17c79096e",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "aeeaa9dc-9dd7-4f88-9279-cefde7b76cb0",
+      "Role": 2,
+      "AuctionId": "Auction1",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ "a6909cee-c513-4564-a143-53da3832d5db" ]
+      },
+      "Id": "77bc3f1f-2dc3-4d05-b582-69a17c79096e",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "aeeaa9dc-9dd7-4f88-9279-cefde7b76cb0",
+      "Role": 2,
+      "AuctionId": "Auction2",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ "a6909cee-c513-4564-a143-53da3832d5db", "b7881090-8158-49a4-bd02-dd6bb6fa1df0", "2b4111e5-39de-4bbf-8446-0235cb786562", "26df8e88-c22c-47e3-a84e-aa86c8df5af6" ]
+      },
+      "Id": "77bc3f1f-2dc3-4d05-b582-69a17c79096e",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "aeeaa9dc-9dd7-4f88-9279-cefde7b76cb0",
+      "Role": 2,
+      "AuctionId": "auction6",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ "a6909cee-c513-4564-a143-53da3832d5db", "b7881090-8158-49a4-bd02-dd6bb6fa1df0", "2b4111e5-39de-4bbf-8446-0235cb786562" ]
+      },
+      "Id": "77bc3f1f-2dc3-4d05-b582-69a17c79096e",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "aeeaa9dc-9dd7-4f88-9279-cefde7b76cb0",
+      "Role": 2,
+      "AuctionId": "Auction4",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "77bc3f1f-2dc3-4d05-b582-69a17c79096e",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "0615b4b8-22e5-4616-b203-78eb161cdc7b",
+      "Role": 1,
+      "AuctionId": "Auction3",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "9648c1e1-f72d-4e34-ab46-ddc2010046bf",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "0615b4b8-22e5-4616-b203-78eb161cdc7b",
+      "Role": 1,
+      "AuctionId": "Auction1",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "9648c1e1-f72d-4e34-ab46-ddc2010046bf",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "0615b4b8-22e5-4616-b203-78eb161cdc7b",
+      "Role": 2,
+      "AuctionId": "Auction2",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "9648c1e1-f72d-4e34-ab46-ddc2010046bf",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "0615b4b8-22e5-4616-b203-78eb161cdc7b",
+      "Role": 2,
+      "AuctionId": "auction6",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ "a6909cee-c513-4564-a143-53da3832d5db", "b7881090-8158-49a4-bd02-dd6bb6fa1df0", "2b4111e5-39de-4bbf-8446-0235cb786562", "26df8e88-c22c-47e3-a84e-aa86c8df5af6" ]
+      },
+      "Id": "9648c1e1-f72d-4e34-ab46-ddc2010046bf",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "0615b4b8-22e5-4616-b203-78eb161cdc7b",
+      "Role": 1,
+      "AuctionId": "Auction4",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "9648c1e1-f72d-4e34-ab46-ddc2010046bf",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "d6cd6eab-b140-4950-a2a2-6f473a547522",
+      "Role": 1,
+      "AuctionId": "Auction3",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "d98b25b1-aef5-45ea-94d7-453de9b495f8",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "d6cd6eab-b140-4950-a2a2-6f473a547522",
+      "Role": 1,
+      "AuctionId": "Auction1",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "d98b25b1-aef5-45ea-94d7-453de9b495f8",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "d6cd6eab-b140-4950-a2a2-6f473a547522",
+      "Role": 1,
+      "AuctionId": "Auction2",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "d98b25b1-aef5-45ea-94d7-453de9b495f8",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "d6cd6eab-b140-4950-a2a2-6f473a547522",
+      "Role": 1,
+      "AuctionId": "auction6",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [ ]
+      },
+      "Id": "d98b25b1-aef5-45ea-94d7-453de9b495f8",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    },
+    {
+      "$type": "Auction.DataAccess.Models.Permission, Auction.DataAccess",
+      "UserId": "d6cd6eab-b140-4950-a2a2-6f473a547522",
+      "Role": 1,
+      "AuctionId": "Auction4",
+      "CategoriesId": {
+        "$type": "System.Collections.Generic.List`1[[System.Guid, mscorlib]], mscorlib",
+        "$values": [  ]
+      },
+      "Id": "d98b25b1-aef5-45ea-94d7-453de9b495f8",
+      "UpdateOn": "2016-08-21T01:24:42.4994939+03:00"
+    }
+  ]
+}

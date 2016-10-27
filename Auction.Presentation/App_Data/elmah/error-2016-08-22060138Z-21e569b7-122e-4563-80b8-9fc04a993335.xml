@@ -1,0 +1,179 @@
+﻿<error errorId="21e569b7-122e-4563-80b8-9fc04a993335" host="KXRINS" type="System.InvalidOperationException" message="The current type, Auction.BussinessLogic.Services.IAuctionProvider, is an interface and cannot be constructed. Are you missing a type mapping?" source="Microsoft.Practices.Unity" detail="System.InvalidOperationException: An error occurred when trying to create a controller of type 'Auction.Presentation.Controllers.BidController'. Make sure that the controller has a parameterless public constructor. ---&gt; Microsoft.Practices.Unity.ResolutionFailedException: Resolution of the dependency failed, type = &quot;Auction.Presentation.Controllers.BidController&quot;, name = &quot;(none)&quot;.&#xD;&#xA;Exception occurred while: while resolving.&#xD;&#xA;Exception is: InvalidOperationException - The current type, Auction.BussinessLogic.Services.IAuctionProvider, is an interface and cannot be constructed. Are you missing a type mapping?&#xD;&#xA;-----------------------------------------------&#xD;&#xA;At the time of the exception, the container was:&#xD;&#xA;&#xD;&#xA;  Resolving Auction.Presentation.Controllers.BidController,(none)&#xD;&#xA;  Resolving parameter &quot;aucProvider&quot; of constructor Auction.Presentation.Controllers.BidController(Auction.BussinessLogic.Services.IAuctionProvider aucProvider, Auction.BussinessLogic.Services.IBidService bidService, Auction.BussinessLogic.Services.IProductService productService, Auction.Presentation.Infrastructure.Authentication.CustomUserManager customUserManager)&#xD;&#xA;    Resolving Auction.BussinessLogic.Services.IAuctionProvider,(none)&#xD;&#xA; ---&gt; System.InvalidOperationException: The current type, Auction.BussinessLogic.Services.IAuctionProvider, is an interface and cannot be constructed. Are you missing a type mapping?&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicMethodConstructorStrategy.ThrowForAttemptingToConstructInterface(IBuilderContext context)&#xD;&#xA;   at lambda_method(Closure , IBuilderContext )&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicBuildPlanGenerationContext.&lt;&gt;c__DisplayClass1.&lt;GetBuildMethod&gt;b__0(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuilderContext.NewBuildUp(NamedTypeBuildKey newBuildKey)&#xD;&#xA;   at Microsoft.Practices.Unity.ObjectBuilder.NamedTypeDependencyResolverPolicy.Resolve(IBuilderContext context)&#xD;&#xA;   at lambda_method(Closure , IBuilderContext )&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicBuildPlanGenerationContext.&lt;&gt;c__DisplayClass1.&lt;GetBuildMethod&gt;b__0(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.DynamicMethodBuildPlan.BuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.BuildPlanStrategy.PreBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.ObjectBuilder2.StrategyChain.ExecuteBuildUp(IBuilderContext context)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, Object existing, String name, IEnumerable`1 resolverOverrides)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.DoBuildUp(Type t, String name, IEnumerable`1 resolverOverrides)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainer.Resolve(Type t, String name, ResolverOverride[] resolverOverrides)&#xD;&#xA;   at Microsoft.Practices.Unity.UnityContainerExtensions.Resolve(IUnityContainer container, Type t, ResolverOverride[] overrides)&#xD;&#xA;   at Microsoft.Practices.Unity.Mvc.UnityDependencyResolver.GetService(Type serviceType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)&#xD;&#xA;   at System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController&amp; controller, IControllerFactory&amp; factory)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)&#xD;&#xA;   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)&#xD;&#xA;   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" user="user" time="2016-08-22T06:01:38.2944224Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_CONTENT_LENGTH:215&#xD;&#xA;HTTP_CONTENT_TYPE:application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;HTTP_ACCEPT:application/json, text/javascript, */*; q=0.01&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;HTTP_COOKIE:.AspNet.ApplicationCookie=EgK3AH62Euzrkb4vHZeSb_ovRIpt1PcYPXAOT2F0VOTSlCuaeGHQG_WOxdVJnbdvdDgBICW-oNKl-l6n9lL8S6hK0SmPqrid4GmYjkGRUDr6L3zkjNz0qXJApayfQE2krKXolBnGeaJHa8P7swHmfwHm3ZXk2VdCtliY8UDJvulGB7IGzrvIrOWueEpj_GSMEiZS0t4A8IbwS_-71kTIAqJ_1bWflQCiRZ3LWXTgmsbdhdwxz5AXRgmK8Su1FIPj36_jHdrEiOoSFuaH10lappR6jkC2FvEWPRam0iQ6ojfeieB5aL6gRH5pp5znG7QGJgqWt03wtqqGLvV9sZ5dLn4Ta5bfpeQK0jjXLxoIb97GFzmFNwzU8GczwKiAivcxDn5a8yMKLt4N21cuvvAiOuCL4pGiEO6nvbX0qeH_uPkuq3sRTtB6-w5AcXEfrw7pvoLf01Vh90LMmanp6Hds6jcT0l-UBPJE5vZ1mRdjQNvtd4LQxgU1FRdwo6dKyIVFcb2njG95UDuSpOnH03ZmvA&#xD;&#xA;HTTP_HOST:localhost:6997&#xD;&#xA;HTTP_REFERER:http://localhost:6997/&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xD;&#xA;HTTP_ORIGIN:http://localhost:6997&#xD;&#xA;HTTP_X_REQUESTED_WITH:XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Content-Length: 215&#xD;&#xA;Content-Type: application/x-www-form-urlencoded; charset=UTF-8&#xD;&#xA;Accept: application/json, text/javascript, */*; q=0.01&#xD;&#xA;Accept-Encoding: gzip, deflate&#xD;&#xA;Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4&#xD;&#xA;Cookie: .AspNet.ApplicationCookie=EgK3AH62Euzrkb4vHZeSb_ovRIpt1PcYPXAOT2F0VOTSlCuaeGHQG_WOxdVJnbdvdDgBICW-oNKl-l6n9lL8S6hK0SmPqrid4GmYjkGRUDr6L3zkjNz0qXJApayfQE2krKXolBnGeaJHa8P7swHmfwHm3ZXk2VdCtliY8UDJvulGB7IGzrvIrOWueEpj_GSMEiZS0t4A8IbwS_-71kTIAqJ_1bWflQCiRZ3LWXTgmsbdhdwxz5AXRgmK8Su1FIPj36_jHdrEiOoSFuaH10lappR6jkC2FvEWPRam0iQ6ojfeieB5aL6gRH5pp5znG7QGJgqWt03wtqqGLvV9sZ5dLn4Ta5bfpeQK0jjXLxoIb97GFzmFNwzU8GczwKiAivcxDn5a8yMKLt4N21cuvvAiOuCL4pGiEO6nvbX0qeH_uPkuq3sRTtB6-w5AcXEfrw7pvoLf01Vh90LMmanp6Hds6jcT0l-UBPJE5vZ1mRdjQNvtd4LQxgU1FRdwo6dKyIVFcb2njG95UDuSpOnH03ZmvA&#xD;&#xA;Host: localhost:6997&#xD;&#xA;Referer: http://localhost:6997/&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xD;&#xA;Origin: http://localhost:6997&#xD;&#xA;X-Requested-With: XMLHttpRequest&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/2/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="F:\epam\Auction\Auction.Presentation\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="ApplicationCookie" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="user" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="user" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="user" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="215" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="2" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/2" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/en-Us/Auction1/Bid/Create" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="F:\epam\Auction\Auction.Presentation\en-Us\Auction1\Bid\Create" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="4346" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="POST" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/en-Us/Auction1/Bid/Create" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="6997" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/en-Us/Auction1/Bid/Create" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_CONTENT_LENGTH">
+      <value string="215" />
+    </item>
+    <item name="HTTP_CONTENT_TYPE">
+      <value string="application/x-www-form-urlencoded; charset=UTF-8" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="application/json, text/javascript, */*; q=0.01" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string=".AspNet.ApplicationCookie=EgK3AH62Euzrkb4vHZeSb_ovRIpt1PcYPXAOT2F0VOTSlCuaeGHQG_WOxdVJnbdvdDgBICW-oNKl-l6n9lL8S6hK0SmPqrid4GmYjkGRUDr6L3zkjNz0qXJApayfQE2krKXolBnGeaJHa8P7swHmfwHm3ZXk2VdCtliY8UDJvulGB7IGzrvIrOWueEpj_GSMEiZS0t4A8IbwS_-71kTIAqJ_1bWflQCiRZ3LWXTgmsbdhdwxz5AXRgmK8Su1FIPj36_jHdrEiOoSFuaH10lappR6jkC2FvEWPRam0iQ6ojfeieB5aL6gRH5pp5znG7QGJgqWt03wtqqGLvV9sZ5dLn4Ta5bfpeQK0jjXLxoIb97GFzmFNwzU8GczwKiAivcxDn5a8yMKLt4N21cuvvAiOuCL4pGiEO6nvbX0qeH_uPkuq3sRTtB6-w5AcXEfrw7pvoLf01Vh90LMmanp6Hds6jcT0l-UBPJE5vZ1mRdjQNvtd4LQxgU1FRdwo6dKyIVFcb2njG95UDuSpOnH03ZmvA" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:6997" />
+    </item>
+    <item name="HTTP_REFERER">
+      <value string="http://localhost:6997/" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36" />
+    </item>
+    <item name="HTTP_ORIGIN">
+      <value string="http://localhost:6997" />
+    </item>
+    <item name="HTTP_X_REQUESTED_WITH">
+      <value string="XMLHttpRequest" />
+    </item>
+  </serverVariables>
+  <form>
+    <item name="data">
+      <value string="{&quot;auction&quot;:&quot;Auction1&quot;,&quot;userId&quot;:&quot;d6cd6eab-b140-4950-a2a2-6f473a547522&quot;,&quot;datetime&quot;:1471856497908,&quot;productId&quot;:&quot;60be748b-0b2c-43f4-82c6-8262594ab97a&quot;,&quot;price&quot;:4}" />
+    </item>
+  </form>
+  <cookies>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="EgK3AH62Euzrkb4vHZeSb_ovRIpt1PcYPXAOT2F0VOTSlCuaeGHQG_WOxdVJnbdvdDgBICW-oNKl-l6n9lL8S6hK0SmPqrid4GmYjkGRUDr6L3zkjNz0qXJApayfQE2krKXolBnGeaJHa8P7swHmfwHm3ZXk2VdCtliY8UDJvulGB7IGzrvIrOWueEpj_GSMEiZS0t4A8IbwS_-71kTIAqJ_1bWflQCiRZ3LWXTgmsbdhdwxz5AXRgmK8Su1FIPj36_jHdrEiOoSFuaH10lappR6jkC2FvEWPRam0iQ6ojfeieB5aL6gRH5pp5znG7QGJgqWt03wtqqGLvV9sZ5dLn4Ta5bfpeQK0jjXLxoIb97GFzmFNwzU8GczwKiAivcxDn5a8yMKLt4N21cuvvAiOuCL4pGiEO6nvbX0qeH_uPkuq3sRTtB6-w5AcXEfrw7pvoLf01Vh90LMmanp6Hds6jcT0l-UBPJE5vZ1mRdjQNvtd4LQxgU1FRdwo6dKyIVFcb2njG95UDuSpOnH03ZmvA" />
+    </item>
+  </cookies>
+</error>

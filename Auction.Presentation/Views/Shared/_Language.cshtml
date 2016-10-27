@@ -1,0 +1,28 @@
+﻿@using System.Threading
+@using Auction.Presentation.Localization;
+
+@using (Html.BeginForm("SetLocalization", "Localization", FormMethod.Post, new { @class = "form-inline" }))
+{
+    @Html.DropDownList("localizationId", LocalizationService.GetAvalaibleLocalization()
+        .Select(l =>
+        {
+        var routeValues = new RouteValueDictionary(Url.RequestContext.RouteData.Values);
+        if (!routeValues.ContainsKey("lang"))
+        {
+            routeValues.Add("lang", l.LocalizationId);
+        }
+            else
+            {
+                routeValues["lang"] = l.LocalizationId;
+            }
+
+            var item = new SelectListItem
+            {
+                Text = l.Name,
+                //Value = l.LocalizationId,
+                Value = Url.Action((string)Url.RequestContext.RouteData.Values["action"], routeValues),
+                Selected = Thread.CurrentThread.CurrentUICulture.Name.Equals(l.LocalizationId)
+            };
+            return item;
+        }), Resource._chooseLang, new { @class = "ui floating dropdown labeled search icon button locale", id = "lang" })
+}

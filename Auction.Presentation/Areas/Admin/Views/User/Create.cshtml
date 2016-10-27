@@ -1,0 +1,172 @@
+﻿@model UserWithPermissions
+@using Auction.Presentation.Helpers;
+@using Auction.Presentation.Localization;
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminView.cshtml";
+}
+
+
+@{
+    var customRoles = new List<SelectListItem>();
+    var etcRoles = new List<SelectListItem>();
+
+    var roles = Enum.GetValues(typeof(Auction.Presentation.Models.Role))
+            .Cast<Auction.Presentation.Models.Role>();
+
+    customRoles.Add(new SelectListItem() { Text = roles.Last().ToString(), Value = roles.Last().ToString() });
+    customRoles.Add(new SelectListItem() { Text = "Another", Value = "Another" });
+
+    foreach(var r in roles)
+    {
+        if(r.ToString().ToLower() != "admin")
+        {
+            etcRoles.Add(new SelectListItem() { Text = r.ToString(), Value = r.ToString() });
+        }
+    }
+
+    var localizations = LocalizationService.GetAvalaibleLocalization().Select(loc => new
+    {
+        localizationId = loc.LocalizationId,
+        Value = loc.Name
+    });
+
+
+}
+
+<h2>@Resource._admin_addUser</h2>
+<hr />
+<form class="newUser">
+        <div class="ui form">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">
+                        @Resource._admin_user_TLOGIN
+                    </div>
+                    @Html.EditorFor(model => model.User.Login, new { htmlAttributes = new { @class = "form-control" , Name = "Login"} })
+                </div>
+            </div>
+            <div class="field">
+                @Html.ValidationMessageFor(model => model.User.Login, "", new { @class = "text-danger" })
+            </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">
+                        @Resource._admin_user_TPASSWORD
+                    </div>
+                    @Html.EditorFor(model => model.User.Password, new { htmlAttributes = new { @class = "form-control", Name = "Password" } })
+                </div>
+            </div>
+            <div class="field">
+                @Html.ValidationMessageFor(model => model.User.Password, "", new { @class = "text-danger" })
+            </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">
+                        @Resource._admin_user_TFNAME
+                    </div>
+                    @Html.EditorFor(model => model.User.FirstName, new { htmlAttributes = new { @class = "form-control", Name = "FirstName" } })
+                </div>
+            </div>
+            <div class="field">
+                @Html.ValidationMessageFor(model => model.User.FirstName, "", new { @class = "text-danger" })
+            </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">
+                        @Resource._admin_user_TSNAME
+                    </div>
+                    @Html.EditorFor(model => model.User.LastName, new { htmlAttributes = new { @class = "form-control", Name = "LastName" } })
+                </div>
+            </div>
+            <div class="field">
+                @Html.ValidationMessageFor(model => model.User.LastName, "", new { @class = "text-danger" })
+            </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">
+                        @Resource._admin_userRole_TNAME
+                    </div>
+                    @Html.DropDownListFor(model => model.Permissions.First().Role, customRoles, new { @class = "customRole", Name = string.Empty, Id = "customRole" })
+                </div>
+            </div>
+            <div class="another invisible">
+                @foreach (dynamic auction in ViewBag.Auctions as IEnumerable<dynamic>)
+                {
+                    Type t = auction.GetType();
+                    string auctionName = t.GetProperty("Value").GetValue(auction, null);
+
+                    <div>
+                        <h3 class="auctionName">@auctionName</h3>
+                        <div class="field">
+                            <div class="ui labeled input" data-auctionName="@auctionName">
+                                <div class="ui label">
+                                    @Resource._admin_userRole_TNAME
+                                </div>
+                                @Html.DropDownListFor(model => model.Permissions.First().Role, etcRoles, new { @class = string.Format("{0}_etcRole etcRole", auctionName), Name = string.Empty, Id = "etcRole" })
+                            </div>
+                        </div>
+                        <div class="field categories invisible" data-auctionName="@auctionName">
+                            <div class="ui labeled input">
+                                <div class="ui label">
+                                    @Resource._admin_category_TNAME
+                                </div>
+                                <select multiple="" class="ui fluid dropdown @string.Format("{0}_categories", auctionName )">
+                                    <option value=""> Categories</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="field">
+                <div class="ui labeled input">
+                    @Html.DropDownListFor(model => model.User.Id, new SelectList(localizations, "localizationId", "Value"), Resource._chooseLang, new { @class = "ui floating dropdown labeled search icon butto locale", Name = "Locale" })
+                </div>
+            </div>
+            <div class="field">
+                @Html.ValidationMessageFor(model => model.User.Locale, "", new { @class = "text-danger" })
+            </div>
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui label">
+                        @Resource._admin_user_TTZ
+                    </div>
+                    @Html.DropDownListFor(model => model.User.Id, new SelectList(ViewBag.TimeZone, "timezoneId", "Value"), new { @class = "timezoneId", Name = "timezoneId", Id = "timezoneId" })
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="ui labeled input">
+                    <div class="ui icon big button" id="divUpload">
+                        <i class="cloud icon"></i>
+                    </div>
+                    <input type="file" id="image" name="image" style="display: none">
+                    @Html.ValidationMessageFor(model => model.User.Picture, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="field">
+                @Html.ValidationMessageFor(model => model.User.Picture, "", new { @class = "text-danger" })
+            </div>
+
+            <button class="ui green basic button newUser">@Resource._admin_add</button>
+        </div>
+</form>
+
+<div class="link">
+    @Html.ActionLink(Resource._admin_backPage, "Index", new { }, new { @class = "ui blue basic button" })
+</div>
+
+<script>
+    var categoryUrl = @JsonSerialize.SerializeObject(@Url.Action("GetCategory", "Product"));
+    var addUserUrl = @JsonSerialize.SerializeObject(@Url.Action("CreateUser", "User"));
+    var userModelId = null;
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/aduser.js?v5")
+}

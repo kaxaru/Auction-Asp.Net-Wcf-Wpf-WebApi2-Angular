@@ -1,0 +1,51 @@
+﻿@model Auction.Presentation.Models.AdminUserViewModel
+@using Auction.Presentation.Helpers;
+
+@{
+    ViewBag.Title = "Remove";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminView.cshtml";
+}
+
+
+<h2>@Resource._admin_removeUser</h2>
+<hr />
+<p class="error">@ViewBag.ErrorMessage</p>
+<h3 class="ui red">@Resource._admin_removeUser_Text</h3>
+<div class="ui list">
+
+    <div class="item">
+        @Resource._admin_user_TLOGIN:  @Html.DisplayFor(model => model.Login)
+    </div>
+    <div class="item">
+        @Resource._admin_user_TPASSWORD:  @Html.DisplayFor(model => model.Password)
+    </div>
+    <div class="item">
+        @Resource._admin_user_TFNAME:  @Html.DisplayFor(model => model.FirstName)
+    </div>
+    <div class="item">
+        @Resource._admin_user_TSNAME:  @Html.DisplayFor(model => model.LastName)
+    </div>
+    <div class="item">
+        @Resource._admin_user_TLOCALE:  @Html.DisplayFor(model => model.Locale)
+    </div>
+    <div class="item">
+        @Resource._admin_user_TTZ:  @Html.DisplayFor(model => model.TimezoneId)
+    </div>
+
+</div>
+
+@using (Html.BeginForm())
+{
+
+    <div class="ui form">
+        <div class="field">
+            <input type="submit" value=@Resource._admin_remove class="ui button basic red " />
+        </div>
+    </div>
+}
+
+
+<div class="link">
+    @Html.ActionLink(Resource._admin_backPage, "Index", new { }, new { @class = "ui button basic blue" })
+</div>
+

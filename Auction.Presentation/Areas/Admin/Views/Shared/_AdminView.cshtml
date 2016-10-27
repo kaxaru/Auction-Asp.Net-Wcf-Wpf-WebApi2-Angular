@@ -1,0 +1,50 @@
+﻿@using Auction.Presentation.Localization;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My auction application</title>
+    @Styles.Render("~/Content/semantic")
+    @Styles.Render("~/Content/header.css?v3")
+    @Styles.Render("~/Content/footer.css?v6")
+    @Styles.Render("~/Content/admin_panel.css?v7")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="ui grid">
+        <div class="computer tablet only row">
+            <div class="ui inverted fixed menu navbar page grid">
+                @Html.ActionLink(Resource._app, "Index", "Home", new { area = "" }, new { @class = "brand item" })
+                @Html.ActionLink(Resource._app_auctionHouse, "Index", "Auction", new { area = "Admin" }, new { @class = "brand item" })
+                @Html.ActionLink(Resource._menu_category, "Index", "Category", new { area = "Admin" }, new { @class = "brand item" })
+                @Html.ActionLink(Resource._menu_product, "Index", "Product", new { area = "Admin" }, new { @class = "brand item" })
+                @Html.ActionLink(Resource._menu_user, "Index", "User", new { area = "Admin" }, new { @class = "brand item" })
+                @Html.ActionLink(Resource._elmah_monitor, "Index", "Elmah", new { area = "Admin" }, new { @class = "brand item" })
+                <div class="right menu">
+                    @Html.Action("Login", "Login", new { area = ""});
+                </div>
+            </div>
+        </div>
+    </div>%
+    <div class="container body-content admin_panel">
+        @RenderBody()
+        <hr />        
+    </div>
+    <footer class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <p>&copy; @DateTime.Now.Year - My Auction</p>
+            <div class="pull-right">@Html.Partial("_Language")</div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/semanticJs")
+    @Scripts.Render("~/Scripts/header.js")
+    @Scripts.Render("~/Scripts/footer.js?v2")
+    @Scripts.Render("~/Scripts/calendar.semantic-ui.js?v2")
+    @Scripts.Render("~/Scripts/timer.js?v4")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

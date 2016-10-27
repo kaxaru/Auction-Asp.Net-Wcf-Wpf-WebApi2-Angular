@@ -1,0 +1,59 @@
+﻿[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+    transition: background-color 0.5s; 
+}
+
+input.ng-valid.ng-touched {
+    background-color: #78FA89;
+    transition: background-color 0.5s; 
+}
+
+.modal .header{
+    margin-bottom:20px;
+}
+
+.help-block{
+    width:100%;
+}
+
+.help-block div{
+    text-align:center;
+    color: #ff9b9b;
+}
+
+#preloader {
+   background-color: aquamarine;
+   height:100%;
+   text-align: center;
+   line-height: 3.5em;
+   font-size: 120px;
+}
+
+#loading-bar .bar {
+    background: #33ba3a;
+    height: 4px;
+}
+
+.load { 
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: url("../../Content/Preloader_7/Preloader_7.gif") no-repeat center center fixed;
+    background-color: aquamarine;
+}
+
+.pagination .active a{
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #2ecc40 !important;
+    border-color: #2ecc40;
+}
+
+table input{
+    color: #000000;
+}
